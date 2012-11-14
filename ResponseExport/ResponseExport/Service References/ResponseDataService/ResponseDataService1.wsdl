@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ResponseDataService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IResponseDataService1_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://dev.checkbox.com/Services/ResponseDataService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://dev.checkbox.com/Services/ResponseDataService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://dev.checkbox.com/Services/ResponseDataService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" />
+      <xsd:import schemaLocation="https://dev.checkbox.com/Services/ResponseDataService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IResponseDataService_GetSurveyResponseSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurveyResponseSummary" />
+  </wsdl:message>
+  <wsdl:message name="IResponseDataService_GetSurveyResponseSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurveyResponseSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResponseDataService_ListRecentSurveyResponses_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListRecentSurveyResponses" />
+  </wsdl:message>
+  <wsdl:message name="IResponseDataService_ListRecentSurveyResponses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListRecentSurveyResponsesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResponseDataService_UpdateResponseAnswer_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponseAnswer" />
+  </wsdl:message>
+  <wsdl:message name="IResponseDataService_UpdateResponseAnswer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponseAnswerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResponseDataService_ListSurveyResponses_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListSurveyResponses" />
+  </wsdl:message>
+  <wsdl:message name="IResponseDataService_ListSurveyResponses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListSurveyResponsesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResponseDataService_DeleteSurveyResponses_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSurveyResponses" />
+  </wsdl:message>
+  <wsdl:message name="IResponseDataService_DeleteSurveyResponses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSurveyResponsesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResponseDataService_DeleteAllSurveyResponses_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllSurveyResponses" />
+  </wsdl:message>
+  <wsdl:message name="IResponseDataService_DeleteAllSurveyResponses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllSurveyResponsesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResponseDataService_DeleteAllSurveyTestResponses_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllSurveyTestResponses" />
+  </wsdl:message>
+  <wsdl:message name="IResponseDataService_DeleteAllSurveyTestResponses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllSurveyTestResponsesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResponseDataService_Search_InputMessage">
+    <wsdl:part name="parameters" element="tns:Search" />
+  </wsdl:message>
+  <wsdl:message name="IResponseDataService_Search_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResponseDataService_GetLifecycleResponseDataInMonths_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLifecycleResponseDataInMonths" />
+  </wsdl:message>
+  <wsdl:message name="IResponseDataService_GetLifecycleResponseDataInMonths_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLifecycleResponseDataInMonthsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResponseDataService_GetLifecycleResponseDataInDays_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLifecycleResponseDataInDays" />
+  </wsdl:message>
+  <wsdl:message name="IResponseDataService_GetLifecycleResponseDataInDays_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLifecycleResponseDataInDaysResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResponseDataService_GetLifecycleAggregatedResponseDataInDays_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLifecycleAggregatedResponseDataInDays" />
+  </wsdl:message>
+  <wsdl:message name="IResponseDataService_GetLifecycleAggregatedResponseDataInDays_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLifecycleAggregatedResponseDataInDaysResponse" />
+  </wsdl:message>
+  <wsdl:message name="IResponseDataService_GetAnswersForResponseByGuid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnswersForResponseByGuid" />
+  </wsdl:message>
+  <wsdl:message name="IResponseDataService_GetAnswersForResponseByGuid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnswersForResponseByGuidResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IResponseDataService">
+    <wsdl:operation name="GetSurveyResponseSummary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResponseDataService/GetSurveyResponseSummary" message="tns:IResponseDataService_GetSurveyResponseSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResponseDataService/GetSurveyResponseSummaryResponse" message="tns:IResponseDataService_GetSurveyResponseSummary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListRecentSurveyResponses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResponseDataService/ListRecentSurveyResponses" message="tns:IResponseDataService_ListRecentSurveyResponses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResponseDataService/ListRecentSurveyResponsesResponse" message="tns:IResponseDataService_ListRecentSurveyResponses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResponseAnswer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResponseDataService/UpdateResponseAnswer" message="tns:IResponseDataService_UpdateResponseAnswer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResponseDataService/UpdateResponseAnswerResponse" message="tns:IResponseDataService_UpdateResponseAnswer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListSurveyResponses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResponseDataService/ListSurveyResponses" message="tns:IResponseDataService_ListSurveyResponses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResponseDataService/ListSurveyResponsesResponse" message="tns:IResponseDataService_ListSurveyResponses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSurveyResponses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResponseDataService/DeleteSurveyResponses" message="tns:IResponseDataService_DeleteSurveyResponses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResponseDataService/DeleteSurveyResponsesResponse" message="tns:IResponseDataService_DeleteSurveyResponses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllSurveyResponses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResponseDataService/DeleteAllSurveyResponses" message="tns:IResponseDataService_DeleteAllSurveyResponses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResponseDataService/DeleteAllSurveyResponsesResponse" message="tns:IResponseDataService_DeleteAllSurveyResponses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllSurveyTestResponses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResponseDataService/DeleteAllSurveyTestResponses" message="tns:IResponseDataService_DeleteAllSurveyTestResponses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResponseDataService/DeleteAllSurveyTestResponsesResponse" message="tns:IResponseDataService_DeleteAllSurveyTestResponses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResponseDataService/Search" message="tns:IResponseDataService_Search_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResponseDataService/SearchResponse" message="tns:IResponseDataService_Search_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLifecycleResponseDataInMonths">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResponseDataService/GetLifecycleResponseDataInMonths" message="tns:IResponseDataService_GetLifecycleResponseDataInMonths_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResponseDataService/GetLifecycleResponseDataInMonthsResponse" message="tns:IResponseDataService_GetLifecycleResponseDataInMonths_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLifecycleResponseDataInDays">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResponseDataService/GetLifecycleResponseDataInDays" message="tns:IResponseDataService_GetLifecycleResponseDataInDays_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResponseDataService/GetLifecycleResponseDataInDaysResponse" message="tns:IResponseDataService_GetLifecycleResponseDataInDays_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLifecycleAggregatedResponseDataInDays">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResponseDataService/GetLifecycleAggregatedResponseDataInDays" message="tns:IResponseDataService_GetLifecycleAggregatedResponseDataInDays_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResponseDataService/GetLifecycleAggregatedResponseDataInDaysResponse" message="tns:IResponseDataService_GetLifecycleAggregatedResponseDataInDays_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnswersForResponseByGuid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IResponseDataService/GetAnswersForResponseByGuid" message="tns:IResponseDataService_GetAnswersForResponseByGuid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IResponseDataService/GetAnswersForResponseByGuidResponse" message="tns:IResponseDataService_GetAnswersForResponseByGuid_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IResponseDataService" type="tns:IResponseDataService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSurveyResponseSummary">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/GetSurveyResponseSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListRecentSurveyResponses">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/ListRecentSurveyResponses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResponseAnswer">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/UpdateResponseAnswer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListSurveyResponses">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/ListSurveyResponses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSurveyResponses">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/DeleteSurveyResponses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllSurveyResponses">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/DeleteAllSurveyResponses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllSurveyTestResponses">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/DeleteAllSurveyTestResponses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/Search" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLifecycleResponseDataInMonths">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/GetLifecycleResponseDataInMonths" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLifecycleResponseDataInDays">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/GetLifecycleResponseDataInDays" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLifecycleAggregatedResponseDataInDays">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/GetLifecycleAggregatedResponseDataInDays" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnswersForResponseByGuid">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/GetAnswersForResponseByGuid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IResponseDataService1" type="tns:IResponseDataService">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IResponseDataService1_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSurveyResponseSummary">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/GetSurveyResponseSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListRecentSurveyResponses">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/ListRecentSurveyResponses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResponseAnswer">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/UpdateResponseAnswer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListSurveyResponses">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/ListSurveyResponses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSurveyResponses">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/DeleteSurveyResponses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllSurveyResponses">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/DeleteAllSurveyResponses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllSurveyTestResponses">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/DeleteAllSurveyTestResponses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/Search" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLifecycleResponseDataInMonths">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/GetLifecycleResponseDataInMonths" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLifecycleResponseDataInDays">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/GetLifecycleResponseDataInDays" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLifecycleAggregatedResponseDataInDays">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/GetLifecycleAggregatedResponseDataInDays" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnswersForResponseByGuid">
+      <soap:operation soapAction="http://tempuri.org/IResponseDataService/GetAnswersForResponseByGuid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ResponseDataService">
+    <wsdl:port name="BasicHttpBinding_IResponseDataService" binding="tns:BasicHttpBinding_IResponseDataService">
+      <soap:address location="http://dev.checkbox.com/Services/ResponseDataService.svc/soap" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IResponseDataService1" binding="tns:BasicHttpBinding_IResponseDataService1">
+      <soap:address location="https://dev.checkbox.com/Services/ResponseDataService.svc/soap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

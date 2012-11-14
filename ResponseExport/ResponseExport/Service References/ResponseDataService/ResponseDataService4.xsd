@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://dev.checkbox.com/Services/ResponseDataService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" />
+  <xs:import schemaLocation="https://dev.checkbox.com/Services/ResponseDataService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="https://dev.checkbox.com/Services/ResponseDataService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:element name="GetSurveyResponseSummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="surveyId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSurveyResponseSummaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="GetSurveyResponseSummaryResult" nillable="true" type="q1:ServiceOperationResultOfResponseSummaryDataVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListRecentSurveyResponses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="surveyId" type="xs:int" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListRecentSurveyResponsesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="ListRecentSurveyResponsesResult" nillable="true" type="q2:ServiceOperationResultOfArrayOfResponseDataVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateResponseAnswer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="surveyId" type="xs:int" />
+        <xs:element minOccurs="0" name="responseId" type="xs:long" />
+        <xs:element minOccurs="0" name="answerId" type="xs:long" />
+        <xs:element minOccurs="0" name="answerText" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="optionID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="dateCreated" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateResponseAnswerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="UpdateResponseAnswerResult" nillable="true" type="q3:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListSurveyResponses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="surveyId" type="xs:int" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="resultsPerPage" type="xs:int" />
+        <xs:element minOccurs="0" name="filterField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="filterValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sortField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sortAscending" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListSurveyResponsesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="ListSurveyResponsesResult" nillable="true" type="q4:ServiceOperationResultOfPagedListResultOfArrayOfResponseDataVUqw3SxCVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSurveyResponses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="surveyId" type="xs:int" />
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="responseList" nillable="true" type="q5:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSurveyResponsesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="DeleteSurveyResponsesResult" nillable="true" type="q6:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAllSurveyResponses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="surveyId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAllSurveyResponsesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="DeleteAllSurveyResponsesResult" nillable="true" type="q7:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAllSurveyTestResponses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="surveyId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAllSurveyTestResponsesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="DeleteAllSurveyTestResponsesResult" nillable="true" type="q8:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Search">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchTerm" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="SearchResult" nillable="true" type="q9:ServiceOperationResultOfArrayOfGroupedResultOfResponseDataVUqw3SxCVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLifecycleResponseDataInMonths">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="surveyId" type="xs:int" />
+        <xs:element minOccurs="0" name="numberOfRecentMonths" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLifecycleResponseDataInMonthsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="GetLifecycleResponseDataInMonthsResult" nillable="true" type="q10:ServiceOperationResultOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLifecycleResponseDataInDays">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="surveyId" type="xs:int" />
+        <xs:element minOccurs="0" name="periodLengthInDays" type="xs:int" />
+        <xs:element minOccurs="0" name="numberOfPeriods" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLifecycleResponseDataInDaysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="GetLifecycleResponseDataInDaysResult" nillable="true" type="q11:ServiceOperationResultOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLifecycleAggregatedResponseDataInDays">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="surveyId" type="xs:int" />
+        <xs:element minOccurs="0" name="periodLengthInDays" type="xs:int" />
+        <xs:element minOccurs="0" name="numberOfPeriods" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLifecycleAggregatedResponseDataInDaysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="GetLifecycleAggregatedResponseDataInDaysResult" nillable="true" type="q12:ServiceOperationResultOfArrayOfAggregateResultVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnswersForResponseByGuid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="surveyId" type="xs:int" />
+        <xs:element minOccurs="0" name="languageCode" nillable="true" type="xs:string" />
+        <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="responseGuid" type="q13:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnswersForResponseByGuidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="GetAnswersForResponseByGuidResult" nillable="true" type="q14:ServiceOperationResultOfArrayOfResponseItemAnswerDataVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
