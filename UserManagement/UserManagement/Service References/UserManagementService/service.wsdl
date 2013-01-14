@@ -1,0 +1,1509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UserManagementService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IUserManagementService1_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUserManagementService_ListGroupDefaultPolicyPermissions_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListGroupDefaultPolicyPermissions" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ListGroupDefaultPolicyPermissions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListGroupDefaultPolicyPermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ListAllGroupAccessListEntries_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListAllGroupAccessListEntries" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ListAllGroupAccessListEntries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListAllGroupAccessListEntriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ListGroupAccessListPermissionsForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListGroupAccessListPermissionsForUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ListGroupAccessListPermissionsForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListGroupAccessListPermissionsForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ListGroupAccessListPermissionsForGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListGroupAccessListPermissionsForGroup" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ListGroupAccessListPermissionsForGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListGroupAccessListPermissionsForGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetUserGroupByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserGroupByName" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetUserGroupByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserGroupByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetUserGroupById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserGroupById" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetUserGroupById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserGroupByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ListUserGroupMembers_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListUserGroupMembers" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ListUserGroupMembers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListUserGroupMembersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ListUsersNotInGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListUsersNotInGroup" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ListUsersNotInGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListUsersNotInGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_SearchUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUsers" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_SearchUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_SearchGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchGroups" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_SearchGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_AuthenticateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_AuthenticateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetUserData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserData" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetUserData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetUsersInRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersInRole" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetUsersInRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersInRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ListUserIdentities_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListUserIdentities" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ListUserIdentities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListUserIdentitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetUserProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_GetUserProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_UpdateUserProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_UpdateUserProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_CreateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_CreateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_CreateNetworkUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNetworkUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_CreateNetworkUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNetworkUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ChangeUserEmailAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeUserEmailAddress" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ChangeUserEmailAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeUserEmailAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ChangeUserPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeUserPassword" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ChangeUserPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeUserPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ChangeUserDomain_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeUserDomain" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ChangeUserDomain_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeUserDomainResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_DeleteUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUsers" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_DeleteUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_DeleteResponsesOfUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponsesOfUsers" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_DeleteResponsesOfUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponsesOfUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_DeleteUserProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserProfile" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_DeleteUserProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_RenameUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RenameUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_RenameUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RenameUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_UnlockUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnlockUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_UnlockUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnlockUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_LockUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:LockUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_LockUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LockUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_UserExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserExists" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_UserExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ListUserRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListUserRoles" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ListUserRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListUserRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ListAllAvailableUserRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListAllAvailableUserRoles" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ListAllAvailableUserRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListAllAvailableUserRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_AddUserToRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserToRole" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_AddUserToRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserToRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_RemoveUserFromRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserFromRole" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_RemoveUserFromRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserFromRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ListUserGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListUserGroups" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ListUserGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListUserGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_CreateUserGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUserGroup" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_CreateUserGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUserGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_CopyUserGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:CopyUserGroup" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_CopyUserGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CopyUserGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_CopyUserGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:CopyUserGroups" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_CopyUserGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CopyUserGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_RenameUserGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:RenameUserGroup" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_RenameUserGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RenameUserGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ChangeUserGroupDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeUserGroupDescription" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_ChangeUserGroupDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeUserGroupDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_DeleteUserGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserGroup" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_DeleteUserGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_DeleteUserGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserGroups" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_DeleteUserGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_AddUsersToGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUsersToGroup" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_AddUsersToGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUsersToGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_RemoveUserFromGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserFromGroup" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_RemoveUserFromGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserFromGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_RemoveUsersFromGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUsersFromGroup" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_RemoveUsersFromGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUsersFromGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_RemoveAllUsersFromGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveAllUsersFromGroup" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_RemoveAllUsersFromGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveAllUsersFromGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_DeleteAllGroupMembersFromCheckBox_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllGroupMembersFromCheckBox" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_DeleteAllGroupMembersFromCheckBox_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllGroupMembersFromCheckBoxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_SetGroupDefaultPolicyPermissions_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetGroupDefaultPolicyPermissions" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_SetGroupDefaultPolicyPermissions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetGroupDefaultPolicyPermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_AddUserToGroupAccessList_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserToGroupAccessList" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_AddUserToGroupAccessList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserToGroupAccessListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_AddGroupToGroupAccessList_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddGroupToGroupAccessList" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_AddGroupToGroupAccessList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddGroupToGroupAccessListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_RemoveUserFromGroupAccessList_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserFromGroupAccessList" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_RemoveUserFromGroupAccessList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserFromGroupAccessListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_RemoveGroupFromGroupAccessList_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveGroupFromGroupAccessList" />
+  </wsdl:message>
+  <wsdl:message name="IUserManagementService_RemoveGroupFromGroupAccessList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveGroupFromGroupAccessListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUserManagementService">
+    <wsdl:operation name="ListGroupDefaultPolicyPermissions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/ListGroupDefaultPolicyPermissions" message="tns:IUserManagementService_ListGroupDefaultPolicyPermissions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/ListGroupDefaultPolicyPermissionsResponse" message="tns:IUserManagementService_ListGroupDefaultPolicyPermissions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListAllGroupAccessListEntries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/ListAllGroupAccessListEntries" message="tns:IUserManagementService_ListAllGroupAccessListEntries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/ListAllGroupAccessListEntriesResponse" message="tns:IUserManagementService_ListAllGroupAccessListEntries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListGroupAccessListPermissionsForUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/ListGroupAccessListPermissionsForUser" message="tns:IUserManagementService_ListGroupAccessListPermissionsForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/ListGroupAccessListPermissionsForUserResponse" message="tns:IUserManagementService_ListGroupAccessListPermissionsForUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListGroupAccessListPermissionsForGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/ListGroupAccessListPermissionsForGroup" message="tns:IUserManagementService_ListGroupAccessListPermissionsForGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/ListGroupAccessListPermissionsForGroupResponse" message="tns:IUserManagementService_ListGroupAccessListPermissionsForGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserGroupByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/GetUserGroupByName" message="tns:IUserManagementService_GetUserGroupByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/GetUserGroupByNameResponse" message="tns:IUserManagementService_GetUserGroupByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserGroupById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/GetUserGroupById" message="tns:IUserManagementService_GetUserGroupById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/GetUserGroupByIdResponse" message="tns:IUserManagementService_GetUserGroupById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListUserGroupMembers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/ListUserGroupMembers" message="tns:IUserManagementService_ListUserGroupMembers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/ListUserGroupMembersResponse" message="tns:IUserManagementService_ListUserGroupMembers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListUsersNotInGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/ListUsersNotInGroup" message="tns:IUserManagementService_ListUsersNotInGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/ListUsersNotInGroupResponse" message="tns:IUserManagementService_ListUsersNotInGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/SearchUsers" message="tns:IUserManagementService_SearchUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/SearchUsersResponse" message="tns:IUserManagementService_SearchUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchGroups">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/SearchGroups" message="tns:IUserManagementService_SearchGroups_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/SearchGroupsResponse" message="tns:IUserManagementService_SearchGroups_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/AuthenticateUser" message="tns:IUserManagementService_AuthenticateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/AuthenticateUserResponse" message="tns:IUserManagementService_AuthenticateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/GetUserData" message="tns:IUserManagementService_GetUserData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/GetUserDataResponse" message="tns:IUserManagementService_GetUserData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/GetUsers" message="tns:IUserManagementService_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/GetUsersResponse" message="tns:IUserManagementService_GetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersInRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/GetUsersInRole" message="tns:IUserManagementService_GetUsersInRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/GetUsersInRoleResponse" message="tns:IUserManagementService_GetUsersInRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListUserIdentities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/ListUserIdentities" message="tns:IUserManagementService_ListUserIdentities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/ListUserIdentitiesResponse" message="tns:IUserManagementService_ListUserIdentities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/GetUserProfile" message="tns:IUserManagementService_GetUserProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/GetUserProfileResponse" message="tns:IUserManagementService_GetUserProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/UpdateUserProfile" message="tns:IUserManagementService_UpdateUserProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/UpdateUserProfileResponse" message="tns:IUserManagementService_UpdateUserProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/CreateUser" message="tns:IUserManagementService_CreateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/CreateUserResponse" message="tns:IUserManagementService_CreateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateNetworkUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/CreateNetworkUser" message="tns:IUserManagementService_CreateNetworkUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/CreateNetworkUserResponse" message="tns:IUserManagementService_CreateNetworkUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUserEmailAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/ChangeUserEmailAddress" message="tns:IUserManagementService_ChangeUserEmailAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/ChangeUserEmailAddressResponse" message="tns:IUserManagementService_ChangeUserEmailAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUserPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/ChangeUserPassword" message="tns:IUserManagementService_ChangeUserPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/ChangeUserPasswordResponse" message="tns:IUserManagementService_ChangeUserPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUserDomain">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/ChangeUserDomain" message="tns:IUserManagementService_ChangeUserDomain_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/ChangeUserDomainResponse" message="tns:IUserManagementService_ChangeUserDomain_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/DeleteUser" message="tns:IUserManagementService_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/DeleteUserResponse" message="tns:IUserManagementService_DeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/DeleteUsers" message="tns:IUserManagementService_DeleteUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/DeleteUsersResponse" message="tns:IUserManagementService_DeleteUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResponsesOfUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/DeleteResponsesOfUsers" message="tns:IUserManagementService_DeleteResponsesOfUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/DeleteResponsesOfUsersResponse" message="tns:IUserManagementService_DeleteResponsesOfUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/DeleteUserProfile" message="tns:IUserManagementService_DeleteUserProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/DeleteUserProfileResponse" message="tns:IUserManagementService_DeleteUserProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RenameUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/RenameUser" message="tns:IUserManagementService_RenameUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/RenameUserResponse" message="tns:IUserManagementService_RenameUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnlockUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/UnlockUser" message="tns:IUserManagementService_UnlockUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/UnlockUserResponse" message="tns:IUserManagementService_UnlockUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LockUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/LockUser" message="tns:IUserManagementService_LockUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/LockUserResponse" message="tns:IUserManagementService_LockUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/UserExists" message="tns:IUserManagementService_UserExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/UserExistsResponse" message="tns:IUserManagementService_UserExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListUserRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/ListUserRoles" message="tns:IUserManagementService_ListUserRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/ListUserRolesResponse" message="tns:IUserManagementService_ListUserRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListAllAvailableUserRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/ListAllAvailableUserRoles" message="tns:IUserManagementService_ListAllAvailableUserRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/ListAllAvailableUserRolesResponse" message="tns:IUserManagementService_ListAllAvailableUserRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserToRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/AddUserToRole" message="tns:IUserManagementService_AddUserToRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/AddUserToRoleResponse" message="tns:IUserManagementService_AddUserToRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserFromRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/RemoveUserFromRole" message="tns:IUserManagementService_RemoveUserFromRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/RemoveUserFromRoleResponse" message="tns:IUserManagementService_RemoveUserFromRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListUserGroups">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/ListUserGroups" message="tns:IUserManagementService_ListUserGroups_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/ListUserGroupsResponse" message="tns:IUserManagementService_ListUserGroups_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUserGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/CreateUserGroup" message="tns:IUserManagementService_CreateUserGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/CreateUserGroupResponse" message="tns:IUserManagementService_CreateUserGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyUserGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/CopyUserGroup" message="tns:IUserManagementService_CopyUserGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/CopyUserGroupResponse" message="tns:IUserManagementService_CopyUserGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyUserGroups">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/CopyUserGroups" message="tns:IUserManagementService_CopyUserGroups_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/CopyUserGroupsResponse" message="tns:IUserManagementService_CopyUserGroups_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RenameUserGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/RenameUserGroup" message="tns:IUserManagementService_RenameUserGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/RenameUserGroupResponse" message="tns:IUserManagementService_RenameUserGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUserGroupDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/ChangeUserGroupDescription" message="tns:IUserManagementService_ChangeUserGroupDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/ChangeUserGroupDescriptionResponse" message="tns:IUserManagementService_ChangeUserGroupDescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/DeleteUserGroup" message="tns:IUserManagementService_DeleteUserGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/DeleteUserGroupResponse" message="tns:IUserManagementService_DeleteUserGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserGroups">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/DeleteUserGroups" message="tns:IUserManagementService_DeleteUserGroups_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/DeleteUserGroupsResponse" message="tns:IUserManagementService_DeleteUserGroups_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUsersToGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/AddUsersToGroup" message="tns:IUserManagementService_AddUsersToGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/AddUsersToGroupResponse" message="tns:IUserManagementService_AddUsersToGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserFromGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/RemoveUserFromGroup" message="tns:IUserManagementService_RemoveUserFromGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/RemoveUserFromGroupResponse" message="tns:IUserManagementService_RemoveUserFromGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUsersFromGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/RemoveUsersFromGroup" message="tns:IUserManagementService_RemoveUsersFromGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/RemoveUsersFromGroupResponse" message="tns:IUserManagementService_RemoveUsersFromGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAllUsersFromGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/RemoveAllUsersFromGroup" message="tns:IUserManagementService_RemoveAllUsersFromGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/RemoveAllUsersFromGroupResponse" message="tns:IUserManagementService_RemoveAllUsersFromGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllGroupMembersFromCheckBox">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/DeleteAllGroupMembersFromCheckBox" message="tns:IUserManagementService_DeleteAllGroupMembersFromCheckBox_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/DeleteAllGroupMembersFromCheckBoxResponse" message="tns:IUserManagementService_DeleteAllGroupMembersFromCheckBox_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupDefaultPolicyPermissions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/SetGroupDefaultPolicyPermissions" message="tns:IUserManagementService_SetGroupDefaultPolicyPermissions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/SetGroupDefaultPolicyPermissionsResponse" message="tns:IUserManagementService_SetGroupDefaultPolicyPermissions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserToGroupAccessList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/AddUserToGroupAccessList" message="tns:IUserManagementService_AddUserToGroupAccessList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/AddUserToGroupAccessListResponse" message="tns:IUserManagementService_AddUserToGroupAccessList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddGroupToGroupAccessList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/AddGroupToGroupAccessList" message="tns:IUserManagementService_AddGroupToGroupAccessList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/AddGroupToGroupAccessListResponse" message="tns:IUserManagementService_AddGroupToGroupAccessList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserFromGroupAccessList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/RemoveUserFromGroupAccessList" message="tns:IUserManagementService_RemoveUserFromGroupAccessList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/RemoveUserFromGroupAccessListResponse" message="tns:IUserManagementService_RemoveUserFromGroupAccessList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveGroupFromGroupAccessList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManagementService/RemoveGroupFromGroupAccessList" message="tns:IUserManagementService_RemoveGroupFromGroupAccessList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManagementService/RemoveGroupFromGroupAccessListResponse" message="tns:IUserManagementService_RemoveGroupFromGroupAccessList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUserManagementService" type="tns:IUserManagementService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListGroupDefaultPolicyPermissions">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ListGroupDefaultPolicyPermissions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAllGroupAccessListEntries">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ListAllGroupAccessListEntries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListGroupAccessListPermissionsForUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ListGroupAccessListPermissionsForUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListGroupAccessListPermissionsForGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ListGroupAccessListPermissionsForGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserGroupByName">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/GetUserGroupByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserGroupById">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/GetUserGroupById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListUserGroupMembers">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ListUserGroupMembers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListUsersNotInGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ListUsersNotInGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUsers">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/SearchUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchGroups">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/SearchGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/AuthenticateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserData">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/GetUserData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersInRole">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/GetUsersInRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListUserIdentities">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ListUserIdentities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProfile">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/GetUserProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserProfile">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/UpdateUserProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/CreateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateNetworkUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/CreateNetworkUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUserEmailAddress">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ChangeUserEmailAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUserPassword">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ChangeUserPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUserDomain">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ChangeUserDomain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUsers">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/DeleteUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResponsesOfUsers">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/DeleteResponsesOfUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserProfile">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/DeleteUserProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenameUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/RenameUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnlockUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/UnlockUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LockUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/LockUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserExists">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/UserExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListUserRoles">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ListUserRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAllAvailableUserRoles">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ListAllAvailableUserRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserToRole">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/AddUserToRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserFromRole">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/RemoveUserFromRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListUserGroups">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ListUserGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUserGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/CreateUserGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyUserGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/CopyUserGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyUserGroups">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/CopyUserGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenameUserGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/RenameUserGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUserGroupDescription">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ChangeUserGroupDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/DeleteUserGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserGroups">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/DeleteUserGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUsersToGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/AddUsersToGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserFromGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/RemoveUserFromGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUsersFromGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/RemoveUsersFromGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAllUsersFromGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/RemoveAllUsersFromGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllGroupMembersFromCheckBox">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/DeleteAllGroupMembersFromCheckBox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupDefaultPolicyPermissions">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/SetGroupDefaultPolicyPermissions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserToGroupAccessList">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/AddUserToGroupAccessList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddGroupToGroupAccessList">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/AddGroupToGroupAccessList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserFromGroupAccessList">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/RemoveUserFromGroupAccessList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveGroupFromGroupAccessList">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/RemoveGroupFromGroupAccessList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IUserManagementService1" type="tns:IUserManagementService">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IUserManagementService1_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListGroupDefaultPolicyPermissions">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ListGroupDefaultPolicyPermissions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAllGroupAccessListEntries">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ListAllGroupAccessListEntries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListGroupAccessListPermissionsForUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ListGroupAccessListPermissionsForUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListGroupAccessListPermissionsForGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ListGroupAccessListPermissionsForGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserGroupByName">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/GetUserGroupByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserGroupById">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/GetUserGroupById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListUserGroupMembers">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ListUserGroupMembers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListUsersNotInGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ListUsersNotInGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUsers">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/SearchUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchGroups">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/SearchGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/AuthenticateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserData">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/GetUserData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersInRole">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/GetUsersInRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListUserIdentities">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ListUserIdentities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProfile">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/GetUserProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserProfile">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/UpdateUserProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/CreateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateNetworkUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/CreateNetworkUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUserEmailAddress">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ChangeUserEmailAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUserPassword">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ChangeUserPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUserDomain">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ChangeUserDomain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUsers">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/DeleteUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResponsesOfUsers">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/DeleteResponsesOfUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserProfile">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/DeleteUserProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenameUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/RenameUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnlockUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/UnlockUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LockUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/LockUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserExists">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/UserExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListUserRoles">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ListUserRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAllAvailableUserRoles">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ListAllAvailableUserRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserToRole">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/AddUserToRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserFromRole">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/RemoveUserFromRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListUserGroups">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ListUserGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUserGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/CreateUserGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyUserGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/CopyUserGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyUserGroups">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/CopyUserGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenameUserGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/RenameUserGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUserGroupDescription">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/ChangeUserGroupDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/DeleteUserGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserGroups">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/DeleteUserGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUsersToGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/AddUsersToGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserFromGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/RemoveUserFromGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUsersFromGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/RemoveUsersFromGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAllUsersFromGroup">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/RemoveAllUsersFromGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllGroupMembersFromCheckBox">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/DeleteAllGroupMembersFromCheckBox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupDefaultPolicyPermissions">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/SetGroupDefaultPolicyPermissions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserToGroupAccessList">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/AddUserToGroupAccessList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddGroupToGroupAccessList">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/AddGroupToGroupAccessList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserFromGroupAccessList">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/RemoveUserFromGroupAccessList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveGroupFromGroupAccessList">
+      <soap:operation soapAction="http://tempuri.org/IUserManagementService/RemoveGroupFromGroupAccessList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserManagementService">
+    <wsdl:port name="BasicHttpBinding_IUserManagementService" binding="tns:BasicHttpBinding_IUserManagementService">
+      <soap:address location="http://checkbox-dev.com/Services/UserManagementService.svc/soap" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IUserManagementService1" binding="tns:BasicHttpBinding_IUserManagementService1">
+      <soap:address location="https://ip-0aa6aa6c/Services/UserManagementService.svc/soap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
