@@ -45,7 +45,7 @@ Now that the Service Reference has been successfully created it can be used in a
 Here is an example of what a C# code file may look like to consume the “UserManagementService” client we created. 
 
 
-   		var proxy = new UserManagementServiceClient();
+   	    	var proxy = new UserManagementServiceClient();
             var result = proxy.GetUsersInRole(authenticationToken,role,pageNumber,
 				pageSize,sortField,sortAscending,filterField,filterValue);
 
