@@ -544,6 +544,7 @@ namespace UserManagement
             var proxy = new UserManagementServiceClient();
             var result = proxy.GetUsers(
                                                                                     authenticationToken, 
+                                                                                    null,
                                                                                     pageNumber, 
                                                                                     pageSize, 
                                                                                     sortField, 
