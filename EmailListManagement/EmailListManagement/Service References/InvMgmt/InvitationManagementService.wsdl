@@ -1,0 +1,1142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="InvitationManagementService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://beta.checkboxonline.com/Services/InvitationManagementService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://beta.checkboxonline.com/Services/InvitationManagementService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://beta.checkboxonline.com/Services/InvitationManagementService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://beta.checkboxonline.com/Services/InvitationManagementService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IInvitationManagementService_DeleteEmailListPanels_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEmailListPanels" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_DeleteEmailListPanels_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEmailListPanelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListAvailableUsersForInvitation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListAvailableUsersForInvitation" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListAvailableUsersForInvitation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListAvailableUsersForInvitationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListAvailableUserGroupsForInvitation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListAvailableUserGroupsForInvitation" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListAvailableUserGroupsForInvitation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListAvailableUserGroupsForInvitationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListAvailableEmailListsForInvitation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListAvailableEmailListsForInvitation" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListAvailableEmailListsForInvitation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListAvailableEmailListsForInvitationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_SearchInvitations_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchInvitations" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_SearchInvitations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchInvitationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_RemoveRecipients_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveRecipients" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_RemoveRecipients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveRecipientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_RemovePendingRecipients_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePendingRecipients" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_RemovePendingRecipients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePendingRecipientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_MarkRecipientsOptedOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:MarkRecipientsOptedOut" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_MarkRecipientsOptedOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MarkRecipientsOptedOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_MarkRecipientsResponded_InputMessage">
+    <wsdl:part name="parameters" element="tns:MarkRecipientsResponded" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_MarkRecipientsResponded_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MarkRecipientsRespondedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListInvitationSchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListInvitationSchedule" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListInvitationSchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListInvitationScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_DeleteScheduleItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteScheduleItems" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_DeleteScheduleItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteScheduleItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_SetScheduledDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetScheduledDate" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_SetScheduledDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetScheduledDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_GetScheduleStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetScheduleStatus" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_GetScheduleStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetScheduleStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_RequestBatchMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:RequestBatchMessages" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_RequestBatchMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RequestBatchMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_UpdateBatchStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBatchStatus" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_UpdateBatchStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBatchStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_GetInvitationSentCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvitationSentCount" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_GetInvitationSentCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvitationSentCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListRecentlySentInvitations_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListRecentlySentInvitations" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListRecentlySentInvitations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListRecentlySentInvitationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_AuthenticateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUser" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_AuthenticateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_CreateInvitation_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateInvitation" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_CreateInvitation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateInvitationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_GetInvitation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvitation" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_GetInvitation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvitationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_UpdateInvitation_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInvitation" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_UpdateInvitation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInvitationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_DeleteInvitation_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInvitation" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_DeleteInvitation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInvitationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_DeleteInvitations_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInvitations" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_DeleteInvitations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInvitationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_AddEmailAddressesToInvitation_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmailAddressesToInvitation" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_AddEmailAddressesToInvitation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmailAddressesToInvitationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_AddUsersToInvitation_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUsersToInvitation" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_AddUsersToInvitation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUsersToInvitationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_AddEmailListPanelsToInvitation_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmailListPanelsToInvitation" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_AddEmailListPanelsToInvitation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmailListPanelsToInvitationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_AddUserGroupsToInvitation_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserGroupsToInvitation" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_AddUserGroupsToInvitation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserGroupsToInvitationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListInvitationRecipients_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListInvitationRecipients" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListInvitationRecipients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListInvitationRecipientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListRecentInvitationRecipients_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListRecentInvitationRecipients" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListRecentInvitationRecipients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListRecentInvitationRecipientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_SendInvitationToFilteredRecipientList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendInvitationToFilteredRecipientList" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_SendInvitationToFilteredRecipientList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendInvitationToFilteredRecipientListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_SendInvitationToRecipientList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendInvitationToRecipientList" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_SendInvitationToRecipientList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendInvitationToRecipientListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListInvitations_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListInvitations" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListInvitations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListInvitationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListFilteredInvitations_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListFilteredInvitations" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListFilteredInvitations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListFilteredInvitationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListSentInvitations_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListSentInvitations" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListSentInvitations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListSentInvitationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListScheduledInvitations_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListScheduledInvitations" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListScheduledInvitations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListScheduledInvitationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_GetInvitationCountForSurvey_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvitationCountForSurvey" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_GetInvitationCountForSurvey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvitationCountForSurveyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_GetInvitationCountForSurveyByType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvitationCountForSurveyByType" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_GetInvitationCountForSurveyByType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvitationCountForSurveyByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListEmailPanels_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListEmailPanels" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListEmailPanels_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListEmailPanelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListEmailPanelsByPeriod_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListEmailPanelsByPeriod" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListEmailPanelsByPeriod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListEmailPanelsByPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_CreateEmailListPanel_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateEmailListPanel" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_CreateEmailListPanel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateEmailListPanelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_GetEmailListPanelInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailListPanelInfo" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_GetEmailListPanelInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailListPanelInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_CopyEmailListPanel_InputMessage">
+    <wsdl:part name="parameters" element="tns:CopyEmailListPanel" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_CopyEmailListPanel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CopyEmailListPanelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_CopyEmailListPanels_InputMessage">
+    <wsdl:part name="parameters" element="tns:CopyEmailListPanels" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_CopyEmailListPanels_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CopyEmailListPanelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_UpdateEmailListPanel_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEmailListPanel" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_UpdateEmailListPanel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEmailListPanelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_AddEmailAddressesToEmailListPanel_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmailAddressesToEmailListPanel" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_AddEmailAddressesToEmailListPanel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmailAddressesToEmailListPanelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_RemoveEmailAddressesFromEmailListPanel_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveEmailAddressesFromEmailListPanel" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_RemoveEmailAddressesFromEmailListPanel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveEmailAddressesFromEmailListPanelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListEmailListPanelAddresses_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListEmailListPanelAddresses" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListEmailListPanelAddresses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListEmailListPanelAddressesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListEmailListPanelDefaultPolicyPermissions_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListEmailListPanelDefaultPolicyPermissions" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListEmailListPanelDefaultPolicyPermissions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListEmailListPanelDefaultPolicyPermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_SetEmailListPanelDefaultPolicyPermissions_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetEmailListPanelDefaultPolicyPermissions" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_SetEmailListPanelDefaultPolicyPermissions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetEmailListPanelDefaultPolicyPermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListEmailListPanelAccessListPermissionsForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListEmailListPanelAccessListPermissionsForUser" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListEmailListPanelAccessListPermissionsForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListEmailListPanelAccessListPermissionsForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListEmailListPanelAccessListPermissionsForGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListEmailListPanelAccessListPermissionsForGroup" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListEmailListPanelAccessListPermissionsForGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListEmailListPanelAccessListPermissionsForGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_RemoveUserFromEmailListPanelAccessList_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserFromEmailListPanelAccessList" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_RemoveUserFromEmailListPanelAccessList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserFromEmailListPanelAccessListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_RemoveGroupFromEmailListPanelAccessList_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveGroupFromEmailListPanelAccessList" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_RemoveGroupFromEmailListPanelAccessList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveGroupFromEmailListPanelAccessListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_AddUserToEmailListPanelAccessList_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserToEmailListPanelAccessList" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_AddUserToEmailListPanelAccessList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserToEmailListPanelAccessListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_AddGroupToEmailListPanelAccessList_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddGroupToEmailListPanelAccessList" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_AddGroupToEmailListPanelAccessList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddGroupToEmailListPanelAccessListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_GetRecipientSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecipientSummary" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_GetRecipientSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecipientSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListRecentResponses_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListRecentResponses" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListRecentResponses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListRecentResponsesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListResponses_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListResponses" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_ListResponses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListResponsesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_DeleteEmailListPanel_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEmailListPanel" />
+  </wsdl:message>
+  <wsdl:message name="IInvitationManagementService_DeleteEmailListPanel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEmailListPanelResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IInvitationManagementService">
+    <wsdl:operation name="DeleteEmailListPanels">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/DeleteEmailListPanels" message="tns:IInvitationManagementService_DeleteEmailListPanels_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/DeleteEmailListPanelsResponse" message="tns:IInvitationManagementService_DeleteEmailListPanels_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListAvailableUsersForInvitation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/ListAvailableUsersForInvitation" message="tns:IInvitationManagementService_ListAvailableUsersForInvitation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/ListAvailableUsersForInvitationResponse" message="tns:IInvitationManagementService_ListAvailableUsersForInvitation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListAvailableUserGroupsForInvitation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/ListAvailableUserGroupsForInvitation" message="tns:IInvitationManagementService_ListAvailableUserGroupsForInvitation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/ListAvailableUserGroupsForInvitationResponse" message="tns:IInvitationManagementService_ListAvailableUserGroupsForInvitation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListAvailableEmailListsForInvitation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/ListAvailableEmailListsForInvitation" message="tns:IInvitationManagementService_ListAvailableEmailListsForInvitation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/ListAvailableEmailListsForInvitationResponse" message="tns:IInvitationManagementService_ListAvailableEmailListsForInvitation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchInvitations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/SearchInvitations" message="tns:IInvitationManagementService_SearchInvitations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/SearchInvitationsResponse" message="tns:IInvitationManagementService_SearchInvitations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveRecipients">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/RemoveRecipients" message="tns:IInvitationManagementService_RemoveRecipients_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/RemoveRecipientsResponse" message="tns:IInvitationManagementService_RemoveRecipients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemovePendingRecipients">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/RemovePendingRecipients" message="tns:IInvitationManagementService_RemovePendingRecipients_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/RemovePendingRecipientsResponse" message="tns:IInvitationManagementService_RemovePendingRecipients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MarkRecipientsOptedOut">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/MarkRecipientsOptedOut" message="tns:IInvitationManagementService_MarkRecipientsOptedOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/MarkRecipientsOptedOutResponse" message="tns:IInvitationManagementService_MarkRecipientsOptedOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MarkRecipientsResponded">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/MarkRecipientsResponded" message="tns:IInvitationManagementService_MarkRecipientsResponded_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/MarkRecipientsRespondedResponse" message="tns:IInvitationManagementService_MarkRecipientsResponded_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListInvitationSchedule">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/ListInvitationSchedule" message="tns:IInvitationManagementService_ListInvitationSchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/ListInvitationScheduleResponse" message="tns:IInvitationManagementService_ListInvitationSchedule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteScheduleItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/DeleteScheduleItems" message="tns:IInvitationManagementService_DeleteScheduleItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/DeleteScheduleItemsResponse" message="tns:IInvitationManagementService_DeleteScheduleItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetScheduledDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/SetScheduledDate" message="tns:IInvitationManagementService_SetScheduledDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/SetScheduledDateResponse" message="tns:IInvitationManagementService_SetScheduledDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/GetScheduleStatus" message="tns:IInvitationManagementService_GetScheduleStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/GetScheduleStatusResponse" message="tns:IInvitationManagementService_GetScheduleStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestBatchMessages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/RequestBatchMessages" message="tns:IInvitationManagementService_RequestBatchMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/RequestBatchMessagesResponse" message="tns:IInvitationManagementService_RequestBatchMessages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBatchStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/UpdateBatchStatus" message="tns:IInvitationManagementService_UpdateBatchStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/UpdateBatchStatusResponse" message="tns:IInvitationManagementService_UpdateBatchStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvitationSentCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/GetInvitationSentCount" message="tns:IInvitationManagementService_GetInvitationSentCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/GetInvitationSentCountResponse" message="tns:IInvitationManagementService_GetInvitationSentCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListRecentlySentInvitations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/ListRecentlySentInvitations" message="tns:IInvitationManagementService_ListRecentlySentInvitations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/ListRecentlySentInvitationsResponse" message="tns:IInvitationManagementService_ListRecentlySentInvitations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/AuthenticateUser" message="tns:IInvitationManagementService_AuthenticateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/AuthenticateUserResponse" message="tns:IInvitationManagementService_AuthenticateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateInvitation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/CreateInvitation" message="tns:IInvitationManagementService_CreateInvitation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/CreateInvitationResponse" message="tns:IInvitationManagementService_CreateInvitation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvitation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/GetInvitation" message="tns:IInvitationManagementService_GetInvitation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/GetInvitationResponse" message="tns:IInvitationManagementService_GetInvitation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInvitation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/UpdateInvitation" message="tns:IInvitationManagementService_UpdateInvitation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/UpdateInvitationResponse" message="tns:IInvitationManagementService_UpdateInvitation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInvitation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/DeleteInvitation" message="tns:IInvitationManagementService_DeleteInvitation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/DeleteInvitationResponse" message="tns:IInvitationManagementService_DeleteInvitation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInvitations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/DeleteInvitations" message="tns:IInvitationManagementService_DeleteInvitations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/DeleteInvitationsResponse" message="tns:IInvitationManagementService_DeleteInvitations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailAddressesToInvitation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/AddEmailAddressesToInvitation" message="tns:IInvitationManagementService_AddEmailAddressesToInvitation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/AddEmailAddressesToInvitationResponse" message="tns:IInvitationManagementService_AddEmailAddressesToInvitation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUsersToInvitation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/AddUsersToInvitation" message="tns:IInvitationManagementService_AddUsersToInvitation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/AddUsersToInvitationResponse" message="tns:IInvitationManagementService_AddUsersToInvitation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailListPanelsToInvitation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/AddEmailListPanelsToInvitation" message="tns:IInvitationManagementService_AddEmailListPanelsToInvitation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/AddEmailListPanelsToInvitationResponse" message="tns:IInvitationManagementService_AddEmailListPanelsToInvitation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserGroupsToInvitation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/AddUserGroupsToInvitation" message="tns:IInvitationManagementService_AddUserGroupsToInvitation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/AddUserGroupsToInvitationResponse" message="tns:IInvitationManagementService_AddUserGroupsToInvitation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListInvitationRecipients">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/ListInvitationRecipients" message="tns:IInvitationManagementService_ListInvitationRecipients_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/ListInvitationRecipientsResponse" message="tns:IInvitationManagementService_ListInvitationRecipients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListRecentInvitationRecipients">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/ListRecentInvitationRecipients" message="tns:IInvitationManagementService_ListRecentInvitationRecipients_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/ListRecentInvitationRecipientsResponse" message="tns:IInvitationManagementService_ListRecentInvitationRecipients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendInvitationToFilteredRecipientList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/SendInvitationToFilteredRecipientList" message="tns:IInvitationManagementService_SendInvitationToFilteredRecipientList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/SendInvitationToFilteredRecipientListResponse" message="tns:IInvitationManagementService_SendInvitationToFilteredRecipientList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendInvitationToRecipientList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/SendInvitationToRecipientList" message="tns:IInvitationManagementService_SendInvitationToRecipientList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/SendInvitationToRecipientListResponse" message="tns:IInvitationManagementService_SendInvitationToRecipientList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListInvitations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/ListInvitations" message="tns:IInvitationManagementService_ListInvitations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/ListInvitationsResponse" message="tns:IInvitationManagementService_ListInvitations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListFilteredInvitations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/ListFilteredInvitations" message="tns:IInvitationManagementService_ListFilteredInvitations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/ListFilteredInvitationsResponse" message="tns:IInvitationManagementService_ListFilteredInvitations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListSentInvitations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/ListSentInvitations" message="tns:IInvitationManagementService_ListSentInvitations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/ListSentInvitationsResponse" message="tns:IInvitationManagementService_ListSentInvitations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListScheduledInvitations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/ListScheduledInvitations" message="tns:IInvitationManagementService_ListScheduledInvitations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/ListScheduledInvitationsResponse" message="tns:IInvitationManagementService_ListScheduledInvitations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvitationCountForSurvey">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/GetInvitationCountForSurvey" message="tns:IInvitationManagementService_GetInvitationCountForSurvey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/GetInvitationCountForSurveyResponse" message="tns:IInvitationManagementService_GetInvitationCountForSurvey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvitationCountForSurveyByType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/GetInvitationCountForSurveyByType" message="tns:IInvitationManagementService_GetInvitationCountForSurveyByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/GetInvitationCountForSurveyByTypeResponse" message="tns:IInvitationManagementService_GetInvitationCountForSurveyByType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListEmailPanels">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/ListEmailPanels" message="tns:IInvitationManagementService_ListEmailPanels_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/ListEmailPanelsResponse" message="tns:IInvitationManagementService_ListEmailPanels_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListEmailPanelsByPeriod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/ListEmailPanelsByPeriod" message="tns:IInvitationManagementService_ListEmailPanelsByPeriod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/ListEmailPanelsByPeriodResponse" message="tns:IInvitationManagementService_ListEmailPanelsByPeriod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateEmailListPanel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/CreateEmailListPanel" message="tns:IInvitationManagementService_CreateEmailListPanel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/CreateEmailListPanelResponse" message="tns:IInvitationManagementService_CreateEmailListPanel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailListPanelInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/GetEmailListPanelInfo" message="tns:IInvitationManagementService_GetEmailListPanelInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/GetEmailListPanelInfoResponse" message="tns:IInvitationManagementService_GetEmailListPanelInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyEmailListPanel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/CopyEmailListPanel" message="tns:IInvitationManagementService_CopyEmailListPanel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/CopyEmailListPanelResponse" message="tns:IInvitationManagementService_CopyEmailListPanel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyEmailListPanels">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/CopyEmailListPanels" message="tns:IInvitationManagementService_CopyEmailListPanels_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/CopyEmailListPanelsResponse" message="tns:IInvitationManagementService_CopyEmailListPanels_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmailListPanel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/UpdateEmailListPanel" message="tns:IInvitationManagementService_UpdateEmailListPanel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/UpdateEmailListPanelResponse" message="tns:IInvitationManagementService_UpdateEmailListPanel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailAddressesToEmailListPanel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/AddEmailAddressesToEmailListPanel" message="tns:IInvitationManagementService_AddEmailAddressesToEmailListPanel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/AddEmailAddressesToEmailListPanelResponse" message="tns:IInvitationManagementService_AddEmailAddressesToEmailListPanel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveEmailAddressesFromEmailListPanel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/RemoveEmailAddressesFromEmailListPanel" message="tns:IInvitationManagementService_RemoveEmailAddressesFromEmailListPanel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/RemoveEmailAddressesFromEmailListPanelResponse" message="tns:IInvitationManagementService_RemoveEmailAddressesFromEmailListPanel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListEmailListPanelAddresses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/ListEmailListPanelAddresses" message="tns:IInvitationManagementService_ListEmailListPanelAddresses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/ListEmailListPanelAddressesResponse" message="tns:IInvitationManagementService_ListEmailListPanelAddresses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListEmailListPanelDefaultPolicyPermissions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/ListEmailListPanelDefaultPolicyPermissions" message="tns:IInvitationManagementService_ListEmailListPanelDefaultPolicyPermissions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/ListEmailListPanelDefaultPolicyPermissionsResponse" message="tns:IInvitationManagementService_ListEmailListPanelDefaultPolicyPermissions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEmailListPanelDefaultPolicyPermissions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/SetEmailListPanelDefaultPolicyPermissions" message="tns:IInvitationManagementService_SetEmailListPanelDefaultPolicyPermissions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/SetEmailListPanelDefaultPolicyPermissionsResponse" message="tns:IInvitationManagementService_SetEmailListPanelDefaultPolicyPermissions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListEmailListPanelAccessListPermissionsForUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/ListEmailListPanelAccessListPermissionsForUser" message="tns:IInvitationManagementService_ListEmailListPanelAccessListPermissionsForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/ListEmailListPanelAccessListPermissionsForUserResponse" message="tns:IInvitationManagementService_ListEmailListPanelAccessListPermissionsForUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListEmailListPanelAccessListPermissionsForGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/ListEmailListPanelAccessListPermissionsForGroup" message="tns:IInvitationManagementService_ListEmailListPanelAccessListPermissionsForGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/ListEmailListPanelAccessListPermissionsForGroupResponse" message="tns:IInvitationManagementService_ListEmailListPanelAccessListPermissionsForGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserFromEmailListPanelAccessList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/RemoveUserFromEmailListPanelAccessList" message="tns:IInvitationManagementService_RemoveUserFromEmailListPanelAccessList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/RemoveUserFromEmailListPanelAccessListResponse" message="tns:IInvitationManagementService_RemoveUserFromEmailListPanelAccessList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveGroupFromEmailListPanelAccessList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/RemoveGroupFromEmailListPanelAccessList" message="tns:IInvitationManagementService_RemoveGroupFromEmailListPanelAccessList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/RemoveGroupFromEmailListPanelAccessListResponse" message="tns:IInvitationManagementService_RemoveGroupFromEmailListPanelAccessList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserToEmailListPanelAccessList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/AddUserToEmailListPanelAccessList" message="tns:IInvitationManagementService_AddUserToEmailListPanelAccessList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/AddUserToEmailListPanelAccessListResponse" message="tns:IInvitationManagementService_AddUserToEmailListPanelAccessList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddGroupToEmailListPanelAccessList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/AddGroupToEmailListPanelAccessList" message="tns:IInvitationManagementService_AddGroupToEmailListPanelAccessList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/AddGroupToEmailListPanelAccessListResponse" message="tns:IInvitationManagementService_AddGroupToEmailListPanelAccessList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecipientSummary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/GetRecipientSummary" message="tns:IInvitationManagementService_GetRecipientSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/GetRecipientSummaryResponse" message="tns:IInvitationManagementService_GetRecipientSummary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListRecentResponses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/ListRecentResponses" message="tns:IInvitationManagementService_ListRecentResponses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/ListRecentResponsesResponse" message="tns:IInvitationManagementService_ListRecentResponses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListResponses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/ListResponses" message="tns:IInvitationManagementService_ListResponses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/ListResponsesResponse" message="tns:IInvitationManagementService_ListResponses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmailListPanel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInvitationManagementService/DeleteEmailListPanel" message="tns:IInvitationManagementService_DeleteEmailListPanel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInvitationManagementService/DeleteEmailListPanelResponse" message="tns:IInvitationManagementService_DeleteEmailListPanel_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IInvitationManagementService" type="tns:IInvitationManagementService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DeleteEmailListPanels">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/DeleteEmailListPanels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAvailableUsersForInvitation">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/ListAvailableUsersForInvitation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAvailableUserGroupsForInvitation">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/ListAvailableUserGroupsForInvitation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAvailableEmailListsForInvitation">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/ListAvailableEmailListsForInvitation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchInvitations">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/SearchInvitations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveRecipients">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/RemoveRecipients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemovePendingRecipients">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/RemovePendingRecipients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarkRecipientsOptedOut">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/MarkRecipientsOptedOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarkRecipientsResponded">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/MarkRecipientsResponded" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListInvitationSchedule">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/ListInvitationSchedule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteScheduleItems">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/DeleteScheduleItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetScheduledDate">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/SetScheduledDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScheduleStatus">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/GetScheduleStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestBatchMessages">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/RequestBatchMessages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBatchStatus">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/UpdateBatchStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvitationSentCount">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/GetInvitationSentCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListRecentlySentInvitations">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/ListRecentlySentInvitations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUser">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/AuthenticateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateInvitation">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/CreateInvitation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvitation">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/GetInvitation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInvitation">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/UpdateInvitation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInvitation">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/DeleteInvitation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInvitations">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/DeleteInvitations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailAddressesToInvitation">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/AddEmailAddressesToInvitation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUsersToInvitation">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/AddUsersToInvitation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailListPanelsToInvitation">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/AddEmailListPanelsToInvitation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserGroupsToInvitation">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/AddUserGroupsToInvitation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListInvitationRecipients">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/ListInvitationRecipients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListRecentInvitationRecipients">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/ListRecentInvitationRecipients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendInvitationToFilteredRecipientList">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/SendInvitationToFilteredRecipientList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendInvitationToRecipientList">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/SendInvitationToRecipientList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListInvitations">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/ListInvitations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListFilteredInvitations">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/ListFilteredInvitations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListSentInvitations">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/ListSentInvitations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListScheduledInvitations">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/ListScheduledInvitations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvitationCountForSurvey">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/GetInvitationCountForSurvey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvitationCountForSurveyByType">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/GetInvitationCountForSurveyByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListEmailPanels">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/ListEmailPanels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListEmailPanelsByPeriod">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/ListEmailPanelsByPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateEmailListPanel">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/CreateEmailListPanel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailListPanelInfo">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/GetEmailListPanelInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyEmailListPanel">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/CopyEmailListPanel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyEmailListPanels">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/CopyEmailListPanels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmailListPanel">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/UpdateEmailListPanel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmailAddressesToEmailListPanel">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/AddEmailAddressesToEmailListPanel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveEmailAddressesFromEmailListPanel">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/RemoveEmailAddressesFromEmailListPanel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListEmailListPanelAddresses">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/ListEmailListPanelAddresses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListEmailListPanelDefaultPolicyPermissions">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/ListEmailListPanelDefaultPolicyPermissions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEmailListPanelDefaultPolicyPermissions">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/SetEmailListPanelDefaultPolicyPermissions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListEmailListPanelAccessListPermissionsForUser">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/ListEmailListPanelAccessListPermissionsForUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListEmailListPanelAccessListPermissionsForGroup">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/ListEmailListPanelAccessListPermissionsForGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserFromEmailListPanelAccessList">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/RemoveUserFromEmailListPanelAccessList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveGroupFromEmailListPanelAccessList">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/RemoveGroupFromEmailListPanelAccessList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserToEmailListPanelAccessList">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/AddUserToEmailListPanelAccessList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddGroupToEmailListPanelAccessList">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/AddGroupToEmailListPanelAccessList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecipientSummary">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/GetRecipientSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListRecentResponses">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/ListRecentResponses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListResponses">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/ListResponses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmailListPanel">
+      <soap:operation soapAction="http://tempuri.org/IInvitationManagementService/DeleteEmailListPanel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InvitationManagementService">
+    <wsdl:port name="BasicHttpBinding_IInvitationManagementService" binding="tns:BasicHttpBinding_IInvitationManagementService">
+      <soap:address location="http://beta.checkboxonline.com/Services/InvitationManagementService.svc/soap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

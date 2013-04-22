@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://beta.checkboxonline.com/Services/InvitationManagementService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://beta.checkboxonline.com/Services/InvitationManagementService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" />
+  <xs:element name="DeleteEmailListPanels">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="emailListPanelIdList" nillable="true" type="q1:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEmailListPanelsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="DeleteEmailListPanelsResult" nillable="true" type="q2:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListAvailableUsersForInvitation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="provider" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invitationId" type="xs:int" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="sortField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sortAscending" type="xs:boolean" />
+        <xs:element minOccurs="0" name="filterField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="filterValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListAvailableUsersForInvitationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="ListAvailableUsersForInvitationResult" nillable="true" type="q3:ServiceOperationResultOfPagedListResultOfArrayOfUserDataVUqw3SxCVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListAvailableUserGroupsForInvitation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invitationId" type="xs:int" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="sortField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sortAscending" type="xs:boolean" />
+        <xs:element minOccurs="0" name="filterField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="filterValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListAvailableUserGroupsForInvitationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="ListAvailableUserGroupsForInvitationResult" nillable="true" type="q4:ServiceOperationResultOfPagedListResultOfArrayOfUserGroupDataVUqw3SxCVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListAvailableEmailListsForInvitation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invitationId" type="xs:int" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="sortField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sortAscending" type="xs:boolean" />
+        <xs:element minOccurs="0" name="filterField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="filterValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListAvailableEmailListsForInvitationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="ListAvailableEmailListsForInvitationResult" nillable="true" type="q5:ServiceOperationResultOfPagedListResultOfArrayOfEmailListPanelDataVUqw3SxCVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchInvitations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchTerm" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchInvitationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="SearchInvitationsResult" nillable="true" type="q6:ServiceOperationResultOfArrayOfGroupedResultOfInvitationDataVUqw3SxCVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveRecipients">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invitationId" type="xs:int" />
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="recipientList" nillable="true" type="q7:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveRecipientsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="RemoveRecipientsResult" nillable="true" type="q8:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemovePendingRecipients">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invitationId" type="xs:int" />
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="recipientUserNames" nillable="true" type="q9:ArrayOfstring" />
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="recipientEmailAddresses" nillable="true" type="q10:ArrayOfstring" />
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="recipientGroupIds" nillable="true" type="q11:ArrayOfstring" />
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="recipientEmailListIds" nillable="true" type="q12:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemovePendingRecipientsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="RemovePendingRecipientsResult" nillable="true" type="q13:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarkRecipientsOptedOut">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invitationId" type="xs:int" />
+        <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="recipientList" nillable="true" type="q14:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarkRecipientsOptedOutResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="MarkRecipientsOptedOutResult" nillable="true" type="q15:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarkRecipientsResponded">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invitationId" type="xs:int" />
+        <xs:element xmlns:q16="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="recipientList" nillable="true" type="q16:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarkRecipientsRespondedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="MarkRecipientsRespondedResult" nillable="true" type="q17:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListInvitationSchedule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invitationID" type="xs:int" />
+        <xs:element minOccurs="0" name="sortAscending" type="xs:boolean" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListInvitationScheduleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="ListInvitationScheduleResult" nillable="true" type="q18:ServiceOperationResultOfPagedListResultOfArrayOfInvitationScheduleDataVUqw3SxCVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteScheduleItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invitationID" type="xs:int" />
+        <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="scheduleItemList" nillable="true" type="q19:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteScheduleItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="DeleteScheduleItemsResult" nillable="true" type="q20:ServiceOperationResultOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetScheduledDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invitationID" type="xs:int" />
+        <xs:element minOccurs="0" name="scheduleID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="scheduledDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetScheduledDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="SetScheduledDateResult" nillable="true" type="q21:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetScheduleStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="scheduleID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetScheduleStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="GetScheduleStatusResult" nillable="true" type="q22:ServiceOperationResultOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestBatchMessages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="scheduleID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestBatchMessagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="RequestBatchMessagesResult" nillable="true" type="q23:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBatchStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="scheduleID" type="xs:int" />
+        <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ErrorText" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBatchStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="UpdateBatchStatusResult" nillable="true" type="q24:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvitationSentCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="responseTemplateId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvitationSentCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="GetInvitationSentCountResult" nillable="true" type="q25:ServiceOperationResultOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListRecentlySentInvitations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="responseTemplateId" type="xs:int" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListRecentlySentInvitationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="ListRecentlySentInvitationsResult" nillable="true" type="q26:ServiceOperationResultOfArrayOfInvitationDataVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="AuthenticateUserResult" nillable="true" type="q27:ServiceOperationResultOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateInvitation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="responseTemplateID" type="xs:int" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateInvitationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="CreateInvitationResult" nillable="true" type="q28:ServiceOperationResultOfInvitationDataVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvitation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invitationID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvitationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="GetInvitationResult" nillable="true" type="q29:ServiceOperationResultOfInvitationDataVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateInvitation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="invitation" nillable="true" type="q30:InvitationData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateInvitationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="UpdateInvitationResult" nillable="true" type="q31:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteInvitation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invitationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteInvitationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="DeleteInvitationResult" nillable="true" type="q32:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteInvitations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element xmlns:q33="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="invitationIds" nillable="true" type="q33:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteInvitationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="DeleteInvitationsResult" nillable="true" type="q34:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEmailAddressesToInvitation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invitationID" type="xs:int" />
+        <xs:element xmlns:q35="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="emailAddresses" nillable="true" type="q35:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEmailAddressesToInvitationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="AddEmailAddressesToInvitationResult" nillable="true" type="q36:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUsersToInvitation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invitationID" type="xs:int" />
+        <xs:element xmlns:q37="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="userNames" nillable="true" type="q37:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUsersToInvitationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="AddUsersToInvitationResult" nillable="true" type="q38:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEmailListPanelsToInvitation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invitationID" type="xs:int" />
+        <xs:element xmlns:q39="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="emailListPanelIDs" nillable="true" type="q39:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEmailListPanelsToInvitationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="AddEmailListPanelsToInvitationResult" nillable="true" type="q40:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUserGroupsToInvitation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invitationID" type="xs:int" />
+        <xs:element xmlns:q41="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="userGroupIDs" nillable="true" type="q41:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUserGroupsToInvitationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="AddUserGroupsToInvitationResult" nillable="true" type="q42:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListInvitationRecipients">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invitationID" type="xs:int" />
+        <xs:element minOccurs="0" name="recipientStatusFilter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="recipientIdFilter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListInvitationRecipientsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="ListInvitationRecipientsResult" nillable="true" type="q43:ServiceOperationResultOfPagedListResultOfArrayOfRecipientDataVUqw3SxCVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListRecentInvitationRecipients">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invitationID" type="xs:int" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListRecentInvitationRecipientsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="ListRecentInvitationRecipientsResult" nillable="true" type="q44:ServiceOperationResultOfArrayOfRecipientDataVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendInvitationToFilteredRecipientList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invitationID" type="xs:int" />
+        <xs:element minOccurs="0" name="recipientFilter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendInvitationToFilteredRecipientListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="SendInvitationToFilteredRecipientListResult" nillable="true" type="q45:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendInvitationToRecipientList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invitationID" type="xs:int" />
+        <xs:element xmlns:q46="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="recipientIDs" nillable="true" type="q46:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendInvitationToRecipientListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="SendInvitationToRecipientListResult" nillable="true" type="q47:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListInvitations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="responseTemplateId" type="xs:int" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="sortField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sortAscending" type="xs:boolean" />
+        <xs:element minOccurs="0" name="filterField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="filterValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListInvitationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="ListInvitationsResult" nillable="true" type="q48:ServiceOperationResultOfPagedListResultOfArrayOfInvitationDataVUqw3SxCVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListFilteredInvitations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="responseTemplateId" type="xs:int" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="sortField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sortAscending" type="xs:boolean" />
+        <xs:element minOccurs="0" name="filterField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="filterValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="filterKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListFilteredInvitationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="ListFilteredInvitationsResult" nillable="true" type="q49:ServiceOperationResultOfPagedListResultOfArrayOfInvitationDataVUqw3SxCVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListSentInvitations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="responseTemplateId" type="xs:int" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListSentInvitationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="ListSentInvitationsResult" nillable="true" type="q50:ServiceOperationResultOfPagedListResultOfArrayOfInvitationDataVUqw3SxCVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListScheduledInvitations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="responseTemplateId" type="xs:int" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListScheduledInvitationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="ListScheduledInvitationsResult" nillable="true" type="q51:ServiceOperationResultOfPagedListResultOfArrayOfInvitationDataVUqw3SxCVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvitationCountForSurvey">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="responseTemplateId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvitationCountForSurveyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="GetInvitationCountForSurveyResult" nillable="true" type="q52:ServiceOperationResultOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvitationCountForSurveyByType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authToken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="responseTemplateId" type="xs:int" />
+        <xs:element minOccurs="0" name="isSent" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvitationCountForSurveyByTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="GetInvitationCountForSurveyByTypeResult" nillable="true" type="q53:ServiceOperationResultOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListEmailPanels">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="permission" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="sortField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sortAscending" type="xs:boolean" />
+        <xs:element minOccurs="0" name="filterField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="filterValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListEmailPanelsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="ListEmailPanelsResult" nillable="true" type="q54:ServiceOperationResultOfPagedListResultOfArrayOfEmailListPanelDataVUqw3SxCVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListEmailPanelsByPeriod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="permission" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="sortField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sortAscending" type="xs:boolean" />
+        <xs:element minOccurs="0" name="filterField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="filterValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="period" type="xs:int" />
+        <xs:element minOccurs="0" name="dateFieldName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListEmailPanelsByPeriodResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="ListEmailPanelsByPeriodResult" nillable="true" type="q55:ServiceOperationResultOfPagedListResultOfArrayOfEmailListPanelDataVUqw3SxCVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateEmailListPanel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateEmailListPanelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="CreateEmailListPanelResult" nillable="true" type="q56:ServiceOperationResultOfEmailListPanelDataVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmailListPanelInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailListPanelID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmailListPanelInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="GetEmailListPanelInfoResult" nillable="true" type="q57:ServiceOperationResultOfEmailListPanelDataVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyEmailListPanel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailListPanelID" type="xs:int" />
+        <xs:element minOccurs="0" name="languageCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyEmailListPanelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="CopyEmailListPanelResult" nillable="true" type="q58:ServiceOperationResultOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyEmailListPanels">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element xmlns:q59="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="emailListPanelIdList" nillable="true" type="q59:ArrayOfint" />
+        <xs:element minOccurs="0" name="languageCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyEmailListPanelsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="CopyEmailListPanelsResult" nillable="true" type="q60:ServiceOperationResultOfArrayOfintuHEDJ7Dj" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEmailListPanel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="panelInfo" nillable="true" type="q61:EmailListPanelData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEmailListPanelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="UpdateEmailListPanelResult" nillable="true" type="q62:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEmailAddressesToEmailListPanel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailListPanelID" type="xs:int" />
+        <xs:element xmlns:q63="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="emailAddresses" nillable="true" type="q63:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEmailAddressesToEmailListPanelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="AddEmailAddressesToEmailListPanelResult" nillable="true" type="q64:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveEmailAddressesFromEmailListPanel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailListPanelID" type="xs:int" />
+        <xs:element xmlns:q65="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="emailAddresses" nillable="true" type="q65:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveEmailAddressesFromEmailListPanelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="RemoveEmailAddressesFromEmailListPanelResult" nillable="true" type="q66:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListEmailListPanelAddresses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailListPanelID" type="xs:int" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListEmailListPanelAddressesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="ListEmailListPanelAddressesResult" nillable="true" type="q67:ServiceOperationResultOfPagedListResultOfArrayOfstringuHEDJ7DjVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListEmailListPanelDefaultPolicyPermissions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailListPanelID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListEmailListPanelDefaultPolicyPermissionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="ListEmailListPanelDefaultPolicyPermissionsResult" nillable="true" type="q68:ServiceOperationResultOfArrayOfstringuHEDJ7Dj" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetEmailListPanelDefaultPolicyPermissions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailListPanelID" type="xs:int" />
+        <xs:element xmlns:q69="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="permissions" nillable="true" type="q69:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetEmailListPanelDefaultPolicyPermissionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="SetEmailListPanelDefaultPolicyPermissionsResult" nillable="true" type="q70:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListEmailListPanelAccessListPermissionsForUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailListPanelID" type="xs:int" />
+        <xs:element minOccurs="0" name="uniqueIdentifier" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListEmailListPanelAccessListPermissionsForUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="ListEmailListPanelAccessListPermissionsForUserResult" nillable="true" type="q71:ServiceOperationResultOfArrayOfstringuHEDJ7Dj" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListEmailListPanelAccessListPermissionsForGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailListPanelID" type="xs:int" />
+        <xs:element minOccurs="0" name="userGroupID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListEmailListPanelAccessListPermissionsForGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="ListEmailListPanelAccessListPermissionsForGroupResult" nillable="true" type="q72:ServiceOperationResultOfArrayOfstringuHEDJ7Dj" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveUserFromEmailListPanelAccessList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailListPanelID" type="xs:int" />
+        <xs:element minOccurs="0" name="uniqueIdentifier" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveUserFromEmailListPanelAccessListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="RemoveUserFromEmailListPanelAccessListResult" nillable="true" type="q73:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveGroupFromEmailListPanelAccessList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailListPanelID" type="xs:int" />
+        <xs:element minOccurs="0" name="userGroupID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveGroupFromEmailListPanelAccessListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="RemoveGroupFromEmailListPanelAccessListResult" nillable="true" type="q74:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUserToEmailListPanelAccessList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailListPanelID" type="xs:int" />
+        <xs:element minOccurs="0" name="uniqueIdentifier" nillable="true" type="xs:string" />
+        <xs:element xmlns:q75="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="permissions" nillable="true" type="q75:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUserToEmailListPanelAccessListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="AddUserToEmailListPanelAccessListResult" nillable="true" type="q76:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddGroupToEmailListPanelAccessList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailListPanelID" type="xs:int" />
+        <xs:element minOccurs="0" name="userGroupID" type="xs:int" />
+        <xs:element xmlns:q77="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="permissions" nillable="true" type="q77:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddGroupToEmailListPanelAccessListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="AddGroupToEmailListPanelAccessListResult" nillable="true" type="q78:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecipientSummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invitationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecipientSummaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="GetRecipientSummaryResult" nillable="true" type="q79:ServiceOperationResultOfInvitationRecipientSummaryVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListRecentResponses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invitationId" type="xs:int" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListRecentResponsesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="ListRecentResponsesResult" nillable="true" type="q80:ServiceOperationResultOfArrayOfResponseDataVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListResponses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="invitationId" type="xs:int" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="sortField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sortAscending" type="xs:boolean" />
+        <xs:element minOccurs="0" name="filterField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="filterValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListResponsesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="ListResponsesResult" nillable="true" type="q81:ServiceOperationResultOfPagedListResultOfArrayOfResponseDataVUqw3SxCVUqw3SxC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEmailListPanel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authTicket" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailListPanelID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEmailListPanelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Services.Proxies" minOccurs="0" name="DeleteEmailListPanelResult" nillable="true" type="q82:ServiceOperationResultOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
