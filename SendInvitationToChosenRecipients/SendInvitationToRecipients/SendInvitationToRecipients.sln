@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendInvitationToRecipients", "SendInvitationToRecipients\SendInvitationToRecipients.csproj", "{054EDFD5-6E4D-421D-9583-8312A5312058}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{054EDFD5-6E4D-421D-9583-8312A5312058}.Debug|x86.ActiveCfg = Debug|x86
+		{054EDFD5-6E4D-421D-9583-8312A5312058}.Debug|x86.Build.0 = Debug|x86
+		{054EDFD5-6E4D-421D-9583-8312A5312058}.Release|x86.ActiveCfg = Release|x86
+		{054EDFD5-6E4D-421D-9583-8312A5312058}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
