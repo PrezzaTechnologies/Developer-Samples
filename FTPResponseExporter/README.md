@@ -22,7 +22,7 @@ All dependencies that the project requires should be built into the FTPResponseE
 How does it work
 --------------
 
-The response exporter utilizes the Checkbox Web Services ( using a secured SSL connection ) to pull response data in the same manner that the Export Resposnes dialog in the user interface does. This means that the CSV file that is returned from the Java project should be equivelent to the data returned from the UI. All possible settings in the user interface have equivelents in the web service call and can be utilized, including a few extras.
+The response exporter utilizes the Checkbox Web Services ( using a secured SSL connection ) to pull response data in the same manner that the Export Responses dialog in the user interface does. This means that the CSV file that is returned from the Java project should be equivalent to the data returned from the UI. All possible settings in the user interface have an equivalent in the web service call and can be utilized, including a few extras.
 
 How do I use this thing?
 --------------
@@ -37,7 +37,7 @@ export_options.txt is the file that will tell the Java code where your data is, 
 https://[CUSTOMERURL].checkboxonline.com,[USERNAME],[PASSWORD],[TEMPLATEID],1,0,StartDate,Yesterday,,true,1,9/8/2012,9/11/2014,true,true,true,true,true,true,true,true,true,[FILENAME].csv
 ```
 
-You can add as many different installations, or surveys as you want to this file as long as they are seperated by line breaks. For instance if I want to export 3 surveys, 2 from the same installation and 1 from a seperate one my file would look like this :
+You can add as many different installations, or surveys as you want to this file as long as they are separated by line breaks. For instance if I want to export 3 surveys, 2 from the same installation and 1 from a separate one my file would look like this :
 
 ```sh 
 https://dev.checkboxonline.com,[USERNAME],[PASSWORD],1000,1,0,StartDate,Yesterday,,true,1,9/8/2012,9/11/2014,true,true,true,true,true,true,true,true,true,survey1.csv
@@ -64,7 +64,7 @@ Leaving the file in its default format will simply leave the files on the same s
 I want to run this, but how?
 ---
 
-Once you read through everything, updated the export_options.txt and ftp_options.txt filse and are ready to get your data you can run the FTPResponseExporter-jar-with-dependencies.jar file in the following way :
+Once you read through everything, updated the export_options.txt and ftp_options.txt files and are ready to get your data you can run the FTPResponseExporter-jar-with-dependencies.jar file in the following way :
 
 Open command prompt (or terminal for Linux users ) and navigate to the directory of the FTPResponseExporter-jar-with-dependencies.jar file. Once there enter in the following command :
 
@@ -74,5 +74,5 @@ java -jar ftpresponseexporter-jar-with-dependencies.jar export_options.txt ftp_o
 
 This will start the export process. Note that this manner of export is slower then the user interface but should contain the same data ( it may be displayed in a different column order then the UI ). 
 
-Once this finishes running, you should have your CSV exports. You can set up a windows scheduled task to run these on a schedule or run them whenever you want, thats up to you!
+Once this finishes running, you should have your CSV exports. You can set up a windows scheduled task to run these on a schedule or run them whenever you want, that is up to you!
 
