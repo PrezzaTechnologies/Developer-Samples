@@ -1,0 +1,1 @@
+https://[CUSTOMERURL].checkboxonline.com,[USERNAME],[PASSWORD],[TEMPLATEID],1,0,StartDate,Yesterday,,true,1,9/8/2012,9/11/2014,true,true,true,true,true,true,true,true,true,[FILENAME].csv
