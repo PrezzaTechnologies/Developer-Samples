@@ -49,7 +49,7 @@ public class FTPResponseExporter {
 
     public void exportDataToFTP() {
         ExecutorService executor = Executors.newFixedThreadPool(10);
-        for (final ExportOptions expOptions : exportOptions) {
+        for (final ExportOptions expOptions : exportOptions){
             executor.execute(new Runnable() {
                 @Override
                 public void run() {
