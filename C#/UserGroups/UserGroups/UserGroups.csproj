@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{98533778-E3FD-4638-A889-BFFF7853A8D4}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UserGroups</RootNamespace>
+    <AssemblyName>UserGroups</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CsvHelper">
+      <HintPath>..\packages\CsvHelper.2.5.0\lib\net20\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FTPOptions.cs" />
+    <Compile Include="FTPUploader.cs" />
+    <Compile Include="GroupOptions.cs" />
+    <Compile Include="OptionUtils.cs" />
+    <Compile Include="Service\UserGroup.cs" />
+    <Compile Include="UserGroupExporter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\UserManagementService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Service References\UserManagementService\UserGroups.UserManagementService.ServiceOperationResultOfanyType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagementService\UserGroups.UserManagementService.ServiceOperationResultOfArrayOfAclEntryVUqw3SxC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagementService\UserGroups.UserManagementService.ServiceOperationResultOfArrayOfGroupedResultOfUserDataVUqw3SxCVUqw3SxC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagementService\UserGroups.UserManagementService.ServiceOperationResultOfArrayOfGroupedResultOfUserGroupDataVUqw3SxCVUqw3SxC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagementService\UserGroups.UserManagementService.ServiceOperationResultOfArrayOfintuHEDJ7Dj.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagementService\UserGroups.UserManagementService.ServiceOperationResultOfArrayOfRoleDataVUqw3SxC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagementService\UserGroups.UserManagementService.ServiceOperationResultOfArrayOfstringuHEDJ7Dj.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagementService\UserGroups.UserManagementService.ServiceOperationResultOfboolean.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagementService\UserGroups.UserManagementService.ServiceOperationResultOfint.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagementService\UserGroups.UserManagementService.ServiceOperationResultOfPagedListResultOfArrayOfstringuHEDJ7DjVUqw3SxC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagementService\UserGroups.UserManagementService.ServiceOperationResultOfPagedListResultOfArrayOfUserDataVUqw3SxCVUqw3SxC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagementService\UserGroups.UserManagementService.ServiceOperationResultOfPagedListResultOfArrayOfUserGroupDataVUqw3SxCVUqw3SxC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagementService\UserGroups.UserManagementService.ServiceOperationResultOfSimpleNameValueCollectionVUqw3SxC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagementService\UserGroups.UserManagementService.ServiceOperationResultOfstring.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagementService\UserGroups.UserManagementService.ServiceOperationResultOfUserDataVUqw3SxC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagementService\UserGroups.UserManagementService.ServiceOperationResultOfUserGroupDataVUqw3SxC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserManagementService\UserManagementService.wsdl" />
+    <None Include="Service References\UserManagementService\UserManagementService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagementService\UserManagementService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagementService\UserManagementService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserManagementService\UserManagementService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\UserManagementService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserManagementService\UserManagementService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserManagementService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserManagementService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UserManagementService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ftp_options.txt" />
+    <Content Include="group_options.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

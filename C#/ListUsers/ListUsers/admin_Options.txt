@@ -1,0 +1,1 @@
+http://[CUSTOMERURL].checkboxonline.com,[USERNAME],[PASSWORD],[PROVIDER],1,0,,true,[FILTERFIELD],[FILTERVAL],[FILENAME].csv

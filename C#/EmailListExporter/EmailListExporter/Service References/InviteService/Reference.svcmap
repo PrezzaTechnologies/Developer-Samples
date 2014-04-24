@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="71d16b22-eba1-43b3-b0eb-b3f6bd187115" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8081/Services/InvitationManagementService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="InvitationManagementService.wsdl" MetadataType="Wsdl" ID="76cb03e5-15c2-4d30-b179-a83aa4c5b930" SourceId="1" SourceUrl="http://localhost:8081/Services/InvitationManagementService.svc?wsdl" />
+    <MetadataFile FileName="InvitationManagementService.xsd" MetadataType="Schema" ID="9ced28b8-6f35-46af-8b27-e70e262980e2" SourceId="1" SourceUrl="http://localhost:8081/Services/InvitationManagementService.svc?xsd=xsd3" />
+    <MetadataFile FileName="InvitationManagementService1.xsd" MetadataType="Schema" ID="2261faf9-5ce3-4edd-84ee-bf7f78c8c451" SourceId="1" SourceUrl="http://localhost:8081/Services/InvitationManagementService.svc?xsd=xsd0" />
+    <MetadataFile FileName="InvitationManagementService2.xsd" MetadataType="Schema" ID="8eb60f3e-c636-4030-99fb-146317f69cba" SourceId="1" SourceUrl="http://localhost:8081/Services/InvitationManagementService.svc?xsd=xsd2" />
+    <MetadataFile FileName="InvitationManagementService3.xsd" MetadataType="Schema" ID="1dd94e71-b34e-4b6d-85d2-54194310d1aa" SourceId="1" SourceUrl="http://localhost:8081/Services/InvitationManagementService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
