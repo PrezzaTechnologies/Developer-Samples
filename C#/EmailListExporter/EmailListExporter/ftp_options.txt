@@ -1,1 +1,0 @@
-[HOSTNAME],[USERNAME],[PASSWORD],[DIRECTORY - use / for default]
