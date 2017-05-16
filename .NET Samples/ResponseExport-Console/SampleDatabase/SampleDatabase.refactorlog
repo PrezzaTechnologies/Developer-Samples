@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="c61d93c5-4b90-444a-893a-b5592f189a85" ChangeDateTime="05/16/2017 17:32:41">
+    <Property Name="ElementName" Value="[dbo].[ResponseData].[What is your favorite color?]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ResponseData]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ItemId1526" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="67faeb27-cd4c-4076-869c-e7f68db84eba" ChangeDateTime="05/16/2017 17:34:05">
+    <Property Name="ElementName" Value="[dbo].[ResponseData].[ItemId1526]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ResponseData]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Item1526" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="647c0bb6-5e1c-4069-b1f9-0e3b5fd31123" ChangeDateTime="05/16/2017 17:34:08">
+    <Property Name="ElementName" Value="[dbo].[ResponseData].[ItemId1527]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ResponseData]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Item1527" />
+  </Operation>
+</Operations>

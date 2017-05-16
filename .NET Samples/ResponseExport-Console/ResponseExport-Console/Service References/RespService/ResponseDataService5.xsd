@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Analytics" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Analytics" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://beta.checkboxonline.com/Services/ResponseDataService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Surveys" />
+  <xs:import schemaLocation="http://beta.checkboxonline.com/Services/ResponseDataService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Users" />
+  <xs:import schemaLocation="http://beta.checkboxonline.com/Services/ResponseDataService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" />
+  <xs:complexType name="ResponseSummaryData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompletedResponseCount" type="xs:int" />
+      <xs:element minOccurs="0" name="IncompleteResponseCount" type="xs:int" />
+      <xs:element minOccurs="0" name="SurveyId" type="xs:int" />
+      <xs:element minOccurs="0" name="TestResponseCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseSummaryData" nillable="true" type="tns:ResponseSummaryData" />
+  <xs:complexType name="ArrayOfResponseItemAnswerData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ResponseItemAnswerData" nillable="true" type="tns:ResponseItemAnswerData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResponseItemAnswerData" nillable="true" type="tns:ArrayOfResponseItemAnswerData" />
+  <xs:complexType name="ResponseItemAnswerData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Surveys" base="q1:ItemProxyObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Alias" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Answers" nillable="true" type="tns:ArrayOfResponseItemAnswer" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResponseItemAnswerData" nillable="true" type="tns:ResponseItemAnswerData" />
+  <xs:complexType name="ArrayOfResponseItemAnswer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ResponseItemAnswer" nillable="true" type="tns:ResponseItemAnswer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResponseItemAnswer" nillable="true" type="tns:ArrayOfResponseItemAnswer" />
+  <xs:complexType name="ResponseItemAnswer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Alias" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AnswerId" type="xs:long" />
+      <xs:element minOccurs="0" name="AnswerText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsScored" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OptionId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="OptionText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Points" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseItemAnswer" nillable="true" type="tns:ResponseItemAnswer" />
+  <xs:complexType name="ResponseAggregatedData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AggregateResults" nillable="true" type="tns:ArrayOfAggregateResult" />
+      <xs:element minOccurs="0" name="CompletedResponseCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseAggregatedData" nillable="true" type="tns:ResponseAggregatedData" />
+  <xs:complexType name="ArrayOfAggregateResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AggregateResult" nillable="true" type="tns:AggregateResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAggregateResult" nillable="true" type="tns:ArrayOfAggregateResult" />
+  <xs:complexType name="AggregateResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ReportResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AnswerCount" type="xs:int" />
+          <xs:element minOccurs="0" name="AnswerPercent" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AggregateResult" nillable="true" type="tns:AggregateResult" />
+  <xs:complexType name="ReportResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Points" type="xs:double" />
+      <xs:element minOccurs="0" name="ResultIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="ResultKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResultText" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReportResult" nillable="true" type="tns:ReportResult" />
+  <xs:complexType name="ResponseExportData">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Users" minOccurs="0" name="Respondents" nillable="true" type="q2:ArrayOfUserData" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" minOccurs="0" name="Responses" nillable="true" type="q3:ArrayOfResponseData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseExportData" nillable="true" type="tns:ResponseExportData" />
+  <xs:complexType name="TabularResponseExportData">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Users" minOccurs="0" name="Respondents" nillable="true" type="q4:ArrayOfUserData" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" minOccurs="0" name="Responses" nillable="true" type="q5:ArrayOfSimpleNameValueCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TabularResponseExportData" nillable="true" type="tns:TabularResponseExportData" />
+</xs:schema>

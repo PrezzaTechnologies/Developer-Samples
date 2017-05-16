@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="78b6eeb5-a8ec-49a2-93a4-d0a9c5e2835d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://beta.checkboxonline.com/services/responsedataservice.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ResponseDataService.xsd" MetadataType="Schema" ID="490a918e-46c5-4f1b-892b-39795435fc27" SourceId="1" SourceUrl="http://beta.checkboxonline.com/Services/ResponseDataService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ResponseDataService1.xsd" MetadataType="Schema" ID="6eedf85d-a37e-4b6e-99c0-da54d89f0330" SourceId="1" SourceUrl="http://beta.checkboxonline.com/Services/ResponseDataService.svc?xsd=xsd5" />
+    <MetadataFile FileName="ResponseDataService2.xsd" MetadataType="Schema" ID="dda86774-97f2-4669-9909-fb17b19d234f" SourceId="1" SourceUrl="http://beta.checkboxonline.com/Services/ResponseDataService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ResponseDataService3.xsd" MetadataType="Schema" ID="d3d78eae-ce0e-4da3-ab0a-a59039fd8caa" SourceId="1" SourceUrl="http://beta.checkboxonline.com/Services/ResponseDataService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ResponseDataService4.xsd" MetadataType="Schema" ID="02b6490f-c487-4e60-9628-ac56254a24f1" SourceId="1" SourceUrl="http://beta.checkboxonline.com/Services/ResponseDataService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ResponseDataService.wsdl" MetadataType="Wsdl" ID="b261aab7-ae04-4a51-b280-d9d36595ad03" SourceId="1" SourceUrl="http://beta.checkboxonline.com/services/responsedataservice.svc?wsdl" />
+    <MetadataFile FileName="ResponseDataService5.xsd" MetadataType="Schema" ID="34fc1434-55df-41e5-8e9c-53bd1e3c5d40" SourceId="1" SourceUrl="http://beta.checkboxonline.com/Services/ResponseDataService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ResponseDataService6.xsd" MetadataType="Schema" ID="37d63d32-9aec-4133-a5fb-edbcad98d091" SourceId="1" SourceUrl="http://beta.checkboxonline.com/Services/ResponseDataService.svc?xsd=xsd6" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
