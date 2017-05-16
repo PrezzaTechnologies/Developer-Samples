@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResponseTemplate Version="6.16.0.20">
+  <ExportDate>5/16/2017 5:29:30 PM</ExportDate>
+  <TemplateName><![CDATA[ResponseExportSample]]></TemplateName>
+  <Guid>e8916eb0-19c9-4ffc-926a-090d69793439</Guid>
+  <ActivationStart />
+  <ActivationEnd />
+  <MaxTotalResponses />
+  <MaxResponsesPerUser />
+  <AllowContinue>False</AllowContinue>
+  <AllowEdit>False</AllowEdit>
+  <EnableScoring>False</EnableScoring>
+  <AllowFormReset>False</AllowFormReset>
+  <RandomizeItemsInPages>False</RandomizeItemsInPages>
+  <CompletionType>1</CompletionType>
+  <DisableBackButton>False</DisableBackButton>
+  <AllowSurveyEditWhileActive>True</AllowSurveyEditWhileActive>
+  <ShowSaveAndQuit>False</ShowSaveAndQuit>
+  <Password />
+  <AnonymizeResponses>False</AnonymizeResponses>
+  <GoogleAnalyticsTrackingID />
+  <MobileCompatible>False</MobileCompatible>
+  <ShowItemNumbers>False</ShowItemNumbers>
+  <ShowPageNumbers>False</ShowPageNumbers>
+  <EnableDynamicPageNumbers>False</EnableDynamicPageNumbers>
+  <EnableDynamicItemNumbers>False</EnableDynamicItemNumbers>
+  <ShowAsterisks>True</ShowAsterisks>
+  <HideFooterHeader>True</HideFooterHeader>
+  <InheritFooterHeaderForMobile>False</InheritFooterHeaderForMobile>
+  <ShowProgressBar>False</ShowProgressBar>
+  <ProgressBarOrientation>0</ProgressBarOrientation>
+  <ShowTitle>False</ShowTitle>
+  <ShowValidationMessage>False</ShowValidationMessage>
+  <ShowValidationErrorAlert>False</ShowValidationErrorAlert>
+  <ChartStyleId />
+  <Height />
+  <Width />
+  <BorderWidth />
+  <BorderColor />
+  <BorderStyle />
+  <DefaultLanguage>en-US</DefaultLanguage>
+  <SupportedLanguages>en-US;</SupportedLanguages>
+  <LanguageSource />
+  <LanguageSourceToken />
+  <AllowResponseLanguageChange>True</AllowResponseLanguageChange>
+  <IsDeleted>False</IsDeleted>
+  <IsPoll>False</IsPoll>
+  <CustomTextData>
+    <Language Name="" />
+    <Language Name="en-US" />
+  </CustomTextData>
+  <TemplatePages Count="3">
+    <Page Version="6.16.0.20" Type="HiddenItems" Id="1524">
+      <ExportDate>5/16/2017 5:29:30 PM</ExportDate>
+      <Title />
+      <Position>1</Position>
+      <CreatedDate />
+      <LastModified />
+      <PageBranches Count="0" />
+      <PageCondition />
+      <PageItems Count="0" />
+    </Page>
+    <Page Version="6.16.0.20" Type="ContentPage" Id="1526">
+      <ExportDate>5/16/2017 5:29:30 PM</ExportDate>
+      <Title />
+      <Position>2</Position>
+      <CreatedDate />
+      <LastModified />
+      <PageBranches Count="0" />
+      <PageCondition />
+      <PageItems Count="2">
+        <Item Version="6.16.0.20" TypeName="Select1Data" Id="3790">
+          <ExportDate>5/16/2017 5:29:30 PM</ExportDate>
+          <Alias />
+          <ClassName />
+          <ItemTypeName>RadioButtons</ItemTypeName>
+          <CreatedDate>5/16/2017 5:28:58 PM</CreatedDate>
+          <LastModified>5/16/2017 5:29:10 PM</LastModified>
+          <IsActive>True</IsActive>
+          <ParentItemId />
+          <TextIdPrefix>selectItemData</TextIdPrefix>
+          <IsRequired>False</IsRequired>
+          <ItemTexts UseTextIds="true">
+            <Text>
+              <TextData TextKey="text" Language="en-US"><![CDATA[What is your favorite color?]]></TextData>
+            </Text>
+            <Text>
+              <TextData TextKey="subText" Language="en-US"><![CDATA[<root />]]></TextData>
+            </Text>
+            <Text />
+          </ItemTexts>
+          <AllowOther>False</AllowOther>
+          <Randomize>False</Randomize>
+          <Options Count="4">
+            <Option>
+              <Id>3120</Id>
+              <Alias />
+              <Disabled>False</Disabled>
+              <IsDefault>False</IsDefault>
+              <IsOther>False</IsOther>
+              <Points>0</Points>
+              <Position>1</Position>
+              <IsNoneOfAbove>False</IsNoneOfAbove>
+              <OptionContent />
+              <OptionTexts>
+                <Text>
+                  <TextData TextKey="1" Language="en-US"><![CDATA[Red]]></TextData>
+                </Text>
+              </OptionTexts>
+            </Option>
+            <Option>
+              <Id>3121</Id>
+              <Alias />
+              <Disabled>False</Disabled>
+              <IsDefault>False</IsDefault>
+              <IsOther>False</IsOther>
+              <Points>0</Points>
+              <Position>2</Position>
+              <IsNoneOfAbove>False</IsNoneOfAbove>
+              <OptionContent />
+              <OptionTexts>
+                <Text>
+                  <TextData TextKey="2" Language="en-US"><![CDATA[Blue]]></TextData>
+                </Text>
+              </OptionTexts>
+            </Option>
+            <Option>
+              <Id>3122</Id>
+              <Alias />
+              <Disabled>False</Disabled>
+              <IsDefault>False</IsDefault>
+              <IsOther>False</IsOther>
+              <Points>0</Points>
+              <Position>3</Position>
+              <IsNoneOfAbove>False</IsNoneOfAbove>
+              <OptionContent />
+              <OptionTexts>
+                <Text>
+                  <TextData TextKey="3" Language="en-US"><![CDATA[Green]]></TextData>
+                </Text>
+              </OptionTexts>
+            </Option>
+            <Option>
+              <Id>3123</Id>
+              <Alias />
+              <Disabled>False</Disabled>
+              <IsDefault>False</IsDefault>
+              <IsOther>False</IsOther>
+              <Points>0</Points>
+              <Position>4</Position>
+              <IsNoneOfAbove>False</IsNoneOfAbove>
+              <OptionContent />
+              <OptionTexts>
+                <Text>
+                  <TextData TextKey="4" Language="en-US"><![CDATA[Orange]]></TextData>
+                </Text>
+              </OptionTexts>
+            </Option>
+          </Options>
+          <AppearanceData Version="6.16.0.20">
+            <ExportDate>5/16/2017 5:29:30 PM</ExportDate>
+            <Properties>
+              <Property Name="ItemPosition" Value="Left" Type="System.String" />
+              <Property Name="Layout" Value="Vertical" Type="Checkbox.Forms.Items.UI.Layout" />
+              <Property Name="Columns" Value="" Type="System.String" />
+              <Property Name="LabelPosition" Value="Top" Type="System.String" />
+              <Property Name="ShowNumberLabels" Value="False" Type="System.String" />
+            </Properties>
+          </AppearanceData>
+          <ItemCondition>
+            <RuleData Trigger="Load">
+              <CompositeExpressionData Operator="OperatorNotSpecified" Connector="OR">
+                <Left />
+                <Right />
+                <Children Count="0" />
+              </CompositeExpressionData>
+              <Actions Count="1">
+                <IncludeExcludeActionData ReceiverType="0" />
+              </Actions>
+            </RuleData>
+          </ItemCondition>
+        </Item>
+        <Item Version="6.16.0.20" TypeName="SingleLineTextItemData" Id="3791">
+          <ExportDate>5/16/2017 5:29:30 PM</ExportDate>
+          <Alias />
+          <ClassName />
+          <ItemTypeName>SingleLineText</ItemTypeName>
+          <CreatedDate>5/16/2017 5:29:14 PM</CreatedDate>
+          <LastModified>5/16/2017 5:29:20 PM</LastModified>
+          <IsActive>True</IsActive>
+          <ParentItemId />
+          <TextIdPrefix>textItemData</TextIdPrefix>
+          <IsRequired>False</IsRequired>
+          <ItemTexts UseTextIds="true">
+            <Text>
+              <TextData TextKey="text" Language="en-US"><![CDATA[Why is this your favorite color?]]></TextData>
+            </Text>
+            <Text>
+              <TextData TextKey="subText" Language="en-US"><![CDATA[<root />]]></TextData>
+            </Text>
+            <Text>
+              <TextData TextKey="defaultText" Language="en-US"><![CDATA[]]></TextData>
+            </Text>
+            <Text>
+              <TextData TextKey="defaultText" Language="en-US"><![CDATA[]]></TextData>
+            </Text>
+          </ItemTexts>
+          <Format>None</Format>
+          <CustomFormatId />
+          <IsRequired>False</IsRequired>
+          <MaxLength />
+          <MaxValue />
+          <MinValue />
+          <AutocompleteRemote />
+          <AppearanceData Version="6.16.0.20">
+            <ExportDate>5/16/2017 5:29:30 PM</ExportDate>
+            <Properties>
+              <Property Name="ItemPosition" Value="Left" Type="System.String" />
+              <Property Name="Layout" Value="Horizontal" Type="Checkbox.Forms.Items.UI.Layout" />
+              <Property Name="Width" Value="" Type="System.String" />
+              <Property Name="LabelPosition" Value="Top" Type="System.String" />
+            </Properties>
+          </AppearanceData>
+          <ItemCondition>
+            <RuleData Trigger="Load">
+              <CompositeExpressionData Operator="OperatorNotSpecified" Connector="OR">
+                <Left />
+                <Right />
+                <Children Count="0" />
+              </CompositeExpressionData>
+              <Actions Count="1">
+                <IncludeExcludeActionData ReceiverType="0" />
+              </Actions>
+            </RuleData>
+          </ItemCondition>
+        </Item>
+      </PageItems>
+    </Page>
+    <Page Version="6.16.0.20" Type="Completion" Id="1525">
+      <ExportDate>5/16/2017 5:29:30 PM</ExportDate>
+      <Title />
+      <Position>3</Position>
+      <CreatedDate />
+      <LastModified />
+      <PageBranches Count="0" />
+      <PageCondition />
+      <PageItems Count="1">
+        <Item Version="6.16.0.20" TypeName="MessageItemData" Id="3789">
+          <ExportDate>5/16/2017 5:29:30 PM</ExportDate>
+          <Alias />
+          <ClassName />
+          <ItemTypeName>Message</ItemTypeName>
+          <CreatedDate>5/16/2017 5:28:52 PM</CreatedDate>
+          <LastModified>5/16/2017 5:28:52 PM</LastModified>
+          <IsActive>True</IsActive>
+          <ParentItemId />
+          <TextIdPrefix>messageItemData</TextIdPrefix>
+          <IsRequired>False</IsRequired>
+          <ItemTexts UseTextIds="true">
+            <Text>
+              <TextData TextKey="text" Language="en-US"><![CDATA[Thank you for taking the survey.]]></TextData>
+            </Text>
+          </ItemTexts>
+          <AppearanceData Version="6.16.0.20">
+            <ExportDate>5/16/2017 5:29:30 PM</ExportDate>
+            <Properties>
+              <Property Name="ItemPosition" Value="Left" Type="System.String" />
+              <Property Name="Layout" Value="Horizontal" Type="Checkbox.Forms.Items.UI.Layout" />
+            </Properties>
+          </AppearanceData>
+          <ItemCondition />
+        </Item>
+      </PageItems>
+    </Page>
+  </TemplatePages>
+</ResponseTemplate>

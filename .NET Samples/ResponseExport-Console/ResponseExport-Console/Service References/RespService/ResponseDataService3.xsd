@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Surveys" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Surveys" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://beta.checkboxonline.com/Services/ResponseDataService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" />
+  <xs:complexType name="ItemProxyObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdditionalData" nillable="true" type="xs:anyType" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" minOccurs="0" name="AppearanceData" nillable="true" type="q1:SimpleNameValueCollection" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" minOccurs="0" name="InstanceData" nillable="true" type="q2:SimpleNameValueCollection" />
+      <xs:element minOccurs="0" name="ItemId" type="xs:int" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" minOccurs="0" name="Metadata" nillable="true" type="q3:SimpleNameValueCollection" />
+      <xs:element minOccurs="0" name="PageId" type="xs:int" />
+      <xs:element minOccurs="0" name="ParentTemplateId" type="xs:int" />
+      <xs:element minOccurs="0" name="TypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemProxyObject" nillable="true" type="tns:ItemProxyObject" />
+</xs:schema>

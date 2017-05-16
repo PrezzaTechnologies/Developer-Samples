@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://beta.checkboxonline.com/Services/ResponseDataService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Analytics" />
+  <xs:import schemaLocation="http://beta.checkboxonline.com/Services/ResponseDataService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ServiceOperationResultOfResponseSummaryDataehVPM0kh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ServiceOperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ResponseSummaryData" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Analytics" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CallSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FailureExceptionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailureMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAuthenticated" type="xs:boolean" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Analytics" minOccurs="0" name="ResultData" nillable="true" type="q1:ResponseSummaryData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceOperationResultOfResponseSummaryDataehVPM0kh" nillable="true" type="tns:ServiceOperationResultOfResponseSummaryDataehVPM0kh" />
+  <xs:complexType name="ServiceOperationResultOfArrayOfResponseDatadc4u5pFJ">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ServiceOperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfResponseData" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CallSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FailureExceptionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailureMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAuthenticated" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResultData" nillable="true" type="tns:ArrayOfResponseData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceOperationResultOfArrayOfResponseDatadc4u5pFJ" nillable="true" type="tns:ServiceOperationResultOfArrayOfResponseDatadc4u5pFJ" />
+  <xs:complexType name="ArrayOfResponseData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ResponseData" nillable="true" type="tns:ResponseData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResponseData" nillable="true" type="tns:ArrayOfResponseData" />
+  <xs:complexType name="ResponseData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AnonymousRespondentGuid" nillable="true" type="ser:guid" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Analytics" minOccurs="0" name="Answers" nillable="true" type="q2:ArrayOfResponseItemAnswerData" />
+      <xs:element minOccurs="0" name="CompletionDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Guid" type="ser:guid" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Invitee" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAnonymized" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsTest" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastEditDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastPageViewed" type="xs:int" />
+      <xs:element minOccurs="0" name="NetworkUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RespondentIp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseLanguage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResumeKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Started" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SurveyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserIdentifier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkflowSessionId" nillable="true" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseData" nillable="true" type="tns:ResponseData" />
+  <xs:complexType name="SimpleNameValueCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NameValueList" nillable="true" type="tns:ArrayOfSimpleNameValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SimpleNameValueCollection" nillable="true" type="tns:SimpleNameValueCollection" />
+  <xs:complexType name="ArrayOfSimpleNameValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SimpleNameValue" nillable="true" type="tns:SimpleNameValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSimpleNameValue" nillable="true" type="tns:ArrayOfSimpleNameValue" />
+  <xs:complexType name="SimpleNameValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SimpleNameValue" nillable="true" type="tns:SimpleNameValue" />
+  <xs:complexType name="ServiceOperationResultOfanyType">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ServiceOperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CallSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FailureExceptionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailureMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAuthenticated" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResultData" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceOperationResultOfanyType" nillable="true" type="tns:ServiceOperationResultOfanyType" />
+  <xs:complexType name="ServiceOperationResultOfPagedListResultOfArrayOfResponseDatadc4u5pFJdc4u5pFJ">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ServiceOperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="PagedListResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common">
+            <GenericParameter Name="ArrayOfResponseData" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" />
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CallSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FailureExceptionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailureMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAuthenticated" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResultData" nillable="true" type="tns:PagedListResultOfArrayOfResponseDatadc4u5pFJ" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceOperationResultOfPagedListResultOfArrayOfResponseDatadc4u5pFJdc4u5pFJ" nillable="true" type="tns:ServiceOperationResultOfPagedListResultOfArrayOfResponseDatadc4u5pFJdc4u5pFJ" />
+  <xs:complexType name="PagedListResultOfArrayOfResponseDatadc4u5pFJ">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="PagedListResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfResponseData" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ResultPage" nillable="true" type="tns:ArrayOfResponseData" />
+      <xs:element minOccurs="0" name="TotalItemCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PagedListResultOfArrayOfResponseDatadc4u5pFJ" nillable="true" type="tns:PagedListResultOfArrayOfResponseDatadc4u5pFJ" />
+  <xs:complexType name="ServiceOperationResultOfArrayOfGroupedResultOfResponseDatadc4u5pFJdc4u5pFJ">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ServiceOperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfGroupedResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common">
+            <GenericParameter Name="ResponseData" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" />
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CallSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FailureExceptionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailureMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAuthenticated" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResultData" nillable="true" type="tns:ArrayOfGroupedResultOfResponseDatadc4u5pFJ" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceOperationResultOfArrayOfGroupedResultOfResponseDatadc4u5pFJdc4u5pFJ" nillable="true" type="tns:ServiceOperationResultOfArrayOfGroupedResultOfResponseDatadc4u5pFJdc4u5pFJ" />
+  <xs:complexType name="ArrayOfGroupedResultOfResponseDatadc4u5pFJ">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GroupedResultOfResponseDatadc4u5pFJ" nillable="true" type="tns:GroupedResultOfResponseDatadc4u5pFJ" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGroupedResultOfResponseDatadc4u5pFJ" nillable="true" type="tns:ArrayOfGroupedResultOfResponseDatadc4u5pFJ" />
+  <xs:complexType name="GroupedResultOfResponseDatadc4u5pFJ">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="GroupedResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ResponseData" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GroupField" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupResults" nillable="true" type="tns:ArrayOfResponseData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GroupedResultOfResponseDatadc4u5pFJ" nillable="true" type="tns:GroupedResultOfResponseDatadc4u5pFJ" />
+  <xs:complexType name="ServiceOperationResultOfstring">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ServiceOperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CallSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FailureExceptionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailureMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAuthenticated" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResultData" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceOperationResultOfstring" nillable="true" type="tns:ServiceOperationResultOfstring" />
+  <xs:complexType name="ServiceOperationResultOfResponseAggregatedDataehVPM0kh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ServiceOperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ResponseAggregatedData" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Analytics" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CallSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FailureExceptionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailureMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAuthenticated" type="xs:boolean" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Analytics" minOccurs="0" name="ResultData" nillable="true" type="q3:ResponseAggregatedData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceOperationResultOfResponseAggregatedDataehVPM0kh" nillable="true" type="tns:ServiceOperationResultOfResponseAggregatedDataehVPM0kh" />
+  <xs:complexType name="ServiceOperationResultOfArrayOfResponseItemAnswerDataehVPM0kh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ServiceOperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfResponseItemAnswerData" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Analytics" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CallSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FailureExceptionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailureMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAuthenticated" type="xs:boolean" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Analytics" minOccurs="0" name="ResultData" nillable="true" type="q4:ArrayOfResponseItemAnswerData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceOperationResultOfArrayOfResponseItemAnswerDataehVPM0kh" nillable="true" type="tns:ServiceOperationResultOfArrayOfResponseItemAnswerDataehVPM0kh" />
+  <xs:complexType name="ServiceOperationResultOfPagedListResultOfResponseExportDataehVPM0khdc4u5pFJ">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ServiceOperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="PagedListResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common">
+            <GenericParameter Name="ResponseExportData" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Analytics" />
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CallSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FailureExceptionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailureMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAuthenticated" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResultData" nillable="true" type="tns:PagedListResultOfResponseExportDataehVPM0kh" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceOperationResultOfPagedListResultOfResponseExportDataehVPM0khdc4u5pFJ" nillable="true" type="tns:ServiceOperationResultOfPagedListResultOfResponseExportDataehVPM0khdc4u5pFJ" />
+  <xs:complexType name="PagedListResultOfResponseExportDataehVPM0kh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="PagedListResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ResponseExportData" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Analytics" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Analytics" minOccurs="0" name="ResultPage" nillable="true" type="q5:ResponseExportData" />
+      <xs:element minOccurs="0" name="TotalItemCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PagedListResultOfResponseExportDataehVPM0kh" nillable="true" type="tns:PagedListResultOfResponseExportDataehVPM0kh" />
+  <xs:complexType name="ServiceOperationResultOfPagedListResultOfTabularResponseExportDataehVPM0khdc4u5pFJ">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ServiceOperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="PagedListResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common">
+            <GenericParameter Name="TabularResponseExportData" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Analytics" />
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CallSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FailureExceptionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailureMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAuthenticated" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResultData" nillable="true" type="tns:PagedListResultOfTabularResponseExportDataehVPM0kh" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceOperationResultOfPagedListResultOfTabularResponseExportDataehVPM0khdc4u5pFJ" nillable="true" type="tns:ServiceOperationResultOfPagedListResultOfTabularResponseExportDataehVPM0khdc4u5pFJ" />
+  <xs:complexType name="PagedListResultOfTabularResponseExportDataehVPM0kh">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="PagedListResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TabularResponseExportData" Namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Analytics" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Analytics" minOccurs="0" name="ResultPage" nillable="true" type="q6:TabularResponseExportData" />
+      <xs:element minOccurs="0" name="TotalItemCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PagedListResultOfTabularResponseExportDataehVPM0kh" nillable="true" type="tns:PagedListResultOfTabularResponseExportDataehVPM0kh" />
+  <xs:complexType name="ArrayOfSimpleNameValueCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SimpleNameValueCollection" nillable="true" type="tns:SimpleNameValueCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSimpleNameValueCollection" nillable="true" type="tns:ArrayOfSimpleNameValueCollection" />
+</xs:schema>
