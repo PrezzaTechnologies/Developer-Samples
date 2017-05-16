@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1c9746b3-d8e1-470b-8b4c-8332a096698c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://beta.checkboxonline.com/services/invitationmanagementservice.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="InvitationManagementService.xsd" MetadataType="Schema" ID="e5268fda-2e98-440f-9a9e-f0d549fea580" SourceId="1" SourceUrl="http://beta.checkboxonline.com/Services/InvitationManagementService.svc?xsd=xsd3" />
+    <MetadataFile FileName="InvitationManagementService1.xsd" MetadataType="Schema" ID="9d2283ec-ce67-450e-a11e-fdcf11515fa5" SourceId="1" SourceUrl="http://beta.checkboxonline.com/Services/InvitationManagementService.svc?xsd=xsd1" />
+    <MetadataFile FileName="InvitationManagementService2.xsd" MetadataType="Schema" ID="a75e8216-c241-4781-8ea9-1f8517acbc7e" SourceId="1" SourceUrl="http://beta.checkboxonline.com/Services/InvitationManagementService.svc?xsd=xsd6" />
+    <MetadataFile FileName="InvitationManagementService3.xsd" MetadataType="Schema" ID="0e5456a4-e037-489e-a3f6-665475c3130b" SourceId="1" SourceUrl="http://beta.checkboxonline.com/Services/InvitationManagementService.svc?xsd=xsd5" />
+    <MetadataFile FileName="InvitationManagementService4.xsd" MetadataType="Schema" ID="0f187143-221e-480a-9232-f68614c240b2" SourceId="1" SourceUrl="http://beta.checkboxonline.com/Services/InvitationManagementService.svc?xsd=xsd0" />
+    <MetadataFile FileName="InvitationManagementService5.xsd" MetadataType="Schema" ID="39ee1512-6088-4a3b-a21f-31ba1ab52a4a" SourceId="1" SourceUrl="http://beta.checkboxonline.com/Services/InvitationManagementService.svc?xsd=xsd2" />
+    <MetadataFile FileName="InvitationManagementService6.xsd" MetadataType="Schema" ID="1010f7ca-36e9-46c9-9ad2-4e11ed951da3" SourceId="1" SourceUrl="http://beta.checkboxonline.com/Services/InvitationManagementService.svc?xsd=xsd4" />
+    <MetadataFile FileName="InvitationManagementService.wsdl" MetadataType="Wsdl" ID="b2a16deb-9642-4680-81f3-b527e936281a" SourceId="1" SourceUrl="http://beta.checkboxonline.com/services/invitationmanagementservice.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
