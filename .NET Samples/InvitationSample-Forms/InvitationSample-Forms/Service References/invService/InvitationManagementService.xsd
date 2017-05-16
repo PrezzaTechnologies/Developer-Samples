@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Surveys" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Surveys" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://beta.checkboxonline.com/Services/InvitationManagementService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://beta.checkboxonline.com/Services/InvitationManagementService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" />
+  <xs:import schemaLocation="http://beta.checkboxonline.com/Services/InvitationManagementService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="InvitationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DatabaseId" type="xs:int" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Guid" type="ser:guid" />
+      <xs:element minOccurs="0" name="IncludeOptOut" type="xs:boolean" />
+      <xs:element minOccurs="0" name="InvitationActivityType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastSent" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LinkText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoginOption" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MailFormat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OptOutText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReminderBody" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReminderSubject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseTemplateId" type="xs:int" />
+      <xs:element minOccurs="0" name="ScheduleID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Scheduled" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SuccessfullySent" nillable="true" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvitationData" nillable="true" type="tns:InvitationData" />
+  <xs:complexType name="ArrayOfRecipientData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RecipientData" nillable="true" type="tns:RecipientData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRecipientData" nillable="true" type="tns:ArrayOfRecipientData" />
+  <xs:complexType name="RecipientData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bounced" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DatabaseId" type="xs:long" />
+      <xs:element minOccurs="0" name="EmailListADId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EmailListId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EmailToAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupADId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="GroupId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Guid" type="ser:guid" />
+      <xs:element minOccurs="0" name="HasResponded" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastSent" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MessageCount" type="xs:int" />
+      <xs:element minOccurs="0" name="OptedOut" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PanelMember" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResponseTemplateId" type="xs:int" />
+      <xs:element minOccurs="0" name="Sent" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SuccessfullySent" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RecipientData" nillable="true" type="tns:RecipientData" />
+  <xs:complexType name="ArrayOfInvitationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InvitationData" nillable="true" type="tns:InvitationData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInvitationData" nillable="true" type="tns:ArrayOfInvitationData" />
+  <xs:complexType name="OptedOutInvitationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseTemplateId" type="xs:int" />
+      <xs:element minOccurs="0" name="ResponseTemplateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" type="xs:int" />
+      <xs:element minOccurs="0" name="UserComment" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OptedOutInvitationData" nillable="true" type="tns:OptedOutInvitationData" />
+  <xs:complexType name="InvitationRecipientSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BouncedCount" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrentCount" type="xs:int" />
+      <xs:element minOccurs="0" name="NotRespondedCount" type="xs:int" />
+      <xs:element minOccurs="0" name="OptedOutCount" type="xs:int" />
+      <xs:element minOccurs="0" name="PendingCount" type="xs:int" />
+      <xs:element minOccurs="0" name="RespondedCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvitationRecipientSummary" nillable="true" type="tns:InvitationRecipientSummary" />
+  <xs:complexType name="ItemProxyObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdditionalData" nillable="true" type="xs:anyType" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" minOccurs="0" name="AppearanceData" nillable="true" type="q1:SimpleNameValueCollection" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" minOccurs="0" name="InstanceData" nillable="true" type="q2:SimpleNameValueCollection" />
+      <xs:element minOccurs="0" name="ItemId" type="xs:int" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" minOccurs="0" name="Metadata" nillable="true" type="q3:SimpleNameValueCollection" />
+      <xs:element minOccurs="0" name="PageId" type="xs:int" />
+      <xs:element minOccurs="0" name="ParentTemplateId" type="xs:int" />
+      <xs:element minOccurs="0" name="TypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemProxyObject" nillable="true" type="tns:ItemProxyObject" />
+  <xs:complexType name="ArrayOfPageItemUserData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PageItemUserData" nillable="true" type="tns:PageItemUserData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPageItemUserData" nillable="true" type="tns:ArrayOfPageItemUserData" />
+  <xs:complexType name="PageItemUserData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EscapedUniqueIdentifier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsInList" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UniqueIdentifier" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PageItemUserData" nillable="true" type="tns:PageItemUserData" />
+  <xs:complexType name="ArrayOfInvitationScheduleData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InvitationScheduleData" nillable="true" type="tns:InvitationScheduleData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInvitationScheduleData" nillable="true" type="tns:ArrayOfInvitationScheduleData" />
+  <xs:complexType name="InvitationScheduleData">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="BouncedEmails" nillable="true" type="q4:ArrayOfstring" />
+      <xs:element minOccurs="0" name="CanBeDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvitationActivityType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvitationID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="InvitationScheduleID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProcessingFinished" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ProcessingStarted" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Scheduled" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvitationScheduleData" nillable="true" type="tns:InvitationScheduleData" />
+</xs:schema>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Users" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Users" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://beta.checkboxonline.com/Services/InvitationManagementService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://beta.checkboxonline.com/Services/InvitationManagementService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" />
+  <xs:import schemaLocation="http://beta.checkboxonline.com/Services/InvitationManagementService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfEmailListPanelData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmailListPanelData" nillable="true" type="tns:EmailListPanelData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmailListPanelData" nillable="true" type="tns:ArrayOfEmailListPanelData" />
+  <xs:complexType name="EmailListPanelData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddressCount" type="xs:int" />
+      <xs:element minOccurs="0" name="CssEscapedName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DatabaseId" type="xs:int" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EncodedName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAD" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmailListPanelData" nillable="true" type="tns:EmailListPanelData" />
+  <xs:complexType name="ArrayOfUserData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserData" nillable="true" type="tns:UserData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserData" nillable="true" type="tns:ArrayOfUserData" />
+  <xs:complexType name="UserData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AuthenticationType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EscapedUniqueIdentifier" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GroupMemberships" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GroupMembershipsAD" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element minOccurs="0" name="IsInList" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LockedOut" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OptedOutFromAccount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OptedOutFromAccountComment" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" minOccurs="0" name="OptedOutSurveys" nillable="true" type="q3:SimpleNameValueCollection" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Common" minOccurs="0" name="Profile" nillable="true" type="q4:SimpleNameValueCollection" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RoleMemberships" nillable="true" type="q5:ArrayOfstring" />
+      <xs:element minOccurs="0" name="UniqueIdentifier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserGuid" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserData" nillable="true" type="tns:UserData" />
+  <xs:complexType name="ArrayOfUserGroupData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserGroupData" nillable="true" type="tns:UserGroupData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserGroupData" nillable="true" type="tns:ArrayOfUserGroupData" />
+  <xs:complexType name="UserGroupData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CanCopy" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CanDelete" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CssEscapedName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DatabaseId" type="xs:int" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EncodedName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAD" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MemberCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserGroupData" nillable="true" type="tns:UserGroupData" />
+</xs:schema>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Analytics" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Analytics" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://beta.checkboxonline.com/Services/InvitationManagementService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Surveys" />
+  <xs:complexType name="ArrayOfResponseItemAnswerData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ResponseItemAnswerData" nillable="true" type="tns:ResponseItemAnswerData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResponseItemAnswerData" nillable="true" type="tns:ArrayOfResponseItemAnswerData" />
+  <xs:complexType name="ResponseItemAnswerData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Checkbox.Wcf.Contracts.Data.Surveys" base="q1:ItemProxyObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Alias" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Answers" nillable="true" type="tns:ArrayOfResponseItemAnswer" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResponseItemAnswerData" nillable="true" type="tns:ResponseItemAnswerData" />
+  <xs:complexType name="ArrayOfResponseItemAnswer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ResponseItemAnswer" nillable="true" type="tns:ResponseItemAnswer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResponseItemAnswer" nillable="true" type="tns:ArrayOfResponseItemAnswer" />
+  <xs:complexType name="ResponseItemAnswer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Alias" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AnswerId" type="xs:long" />
+      <xs:element minOccurs="0" name="AnswerText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsScored" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OptionId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="OptionText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Points" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseItemAnswer" nillable="true" type="tns:ResponseItemAnswer" />
+</xs:schema>
